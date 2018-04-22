@@ -1,0 +1,18 @@
+1.HTML(HyperText Markup Language):
+    1.是一种超文本标记语言
+    2.不是一种编程语言，而是一种标记语言
+    3.标记语言是一套标记标签
+    4.HTML使用标记标签来描述网页
+    5.HTML问价包含了HTML标签及文本内容
+    6.Html文档也叫web页面
+2.对于中文网页需要使用 <meta charset="utf-8"> 声明编码，否则会出现乱码。
+    有些浏览器会设置 GBK 为默认编码，则你需要设置为 <meta charset="gbk">
+3.HTML的文件名后缀分为".html"和".htm"两种
+4.HTML文件的部分标签解释：
+    1.<!DOCTYPE html> 声明为 HTML5 文档
+    2.<html> 元素是 HTML 页面的根元素
+    3.<head> 元素包含了文档的元（meta）数据
+    4.<title> 元素描述了文档的标题
+    5.<body> 元素包含了可见的页面内容
+    6.<h1> 元素定义一个一号标题
+    7.<p> 元素定义一个段落
