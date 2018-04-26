@@ -1,0 +1,25 @@
+1.input标签：
+    1.type：定义输入的类型，是最基本的，必需的。其类型如下：
+        1.text：单行文本框
+        2.password：密码输入框
+        3.radio：单选框，可通过input的name属性来实现单选
+        4.checkbox：复选框
+        5.button：普通按钮
+        6.submit：提交按钮
+        7.reset：重置按钮
+        8.image：图片式提交按钮
+        9.file：文件域
+    2.name：控件名
+    3.value：input控件默认文本
+    4.size：input控件在页面显示的宽度
+    5.checked：设置默认选中
+    6.maxlength：允许输入的最多字符
+2.label标签：
+    1.与input标签配合使用，使用label将input标签包裹即可
+    2.如果label包裹了多个input，需定位到指定input，可通过for  id的方式来使用
+3.textarea标签（文本域）
+    1.可显示多行的文本信息，常使用于评论，留言的场景
+    2.宽高信息常在css文件中设置
+4.select标签（下拉菜单）
+    1.option：select的列表信息
+    2.selected：默认选中项，是option的属性
