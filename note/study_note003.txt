@@ -14,6 +14,25 @@
     4.size：input控件在页面显示的宽度
     5.checked：设置默认选中
     6.maxlength：允许输入的最多字符
+    7.html5新增类型：
+        1.email：邮箱
+        2.tel：手机号
+        3.url：网络地址
+        4.number：数字格式
+        5.search：搜索框，比单纯的input多了一个×，可供用户删除输入内容
+        6.range：自由拖动滑块
+        7.time：小时分钟
+        8.date：年月日
+        9.datetime：时间
+        10.month：年月
+        11.week：星期
+    8.Html5新增部分属性：
+        1.placeholder：类似淘宝的搜索，提示文字不会自动消失，只会在输入框有用户输入的内容时才会消失
+        2.autoface：当页面加载的时候自动获得焦点，类似百度首页，打开百度输入框自动获取焦点
+        3.multiple：支持多文件上传
+        4.autocomplete：是否自动保存已输入内容，比如身份证号等比较长的text，下一次直接输入字符的一部分则自动输入剩下内容（必须给表单name属性，和提交按钮才可使用）
+        5.required：必填项
+        6.accesskey：是元素快速获取焦点的快捷键，常使用ctrl+accesskey值的方式
 2.label标签：
     1.与input标签配合使用，使用label将input标签包裹即可
     2.如果label包裹了多个input，需定位到指定input，可通过for  id的方式来使用
@@ -23,3 +42,13 @@
 4.select标签（下拉菜单）
     1.option：select的列表信息
     2.selected：默认选中项，是option的属性
+5.form（表单域）:
+    1.action：表单需要提交的目的地，未知可为空
+    2.method：提交方式，get 或 post
+    3.name：表单名称
+6.datalist标签
+    1.与input标签配合使用，主要作用是输入提示，类似于百度搜索输入一个字，显示多个匹配项
+    2.语法：list="DataListIdName"
+7.fieldset标签：
+    1.与legend标签搭配使用，fieldset包裹legend标签
+    2.fieldset将一组功能包裹，legend是这一组功能的描述

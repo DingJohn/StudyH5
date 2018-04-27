@@ -6,15 +6,17 @@
 </head>
 <body>
 <div>
-    用户名：<input type="text" size="10"><br>
-    密　码：<input type="password" maxlength="6"><br>
-    性　别：<input type="radio" name="sex">男<input type="radio" name="sex" checked>女<br>
-    爱　好：<input type="checkbox" name="hobby">足球<input type="checkbox" name="hobby" checked>冰球<input type="checkbox"
-                                                                                                   name="hobby">橄榄球<br>
-    确　定：<input type="button" value="确定"><br>
-    提　交：<input type="submit" value="提交"><br>
-    重　置：<input type="reset" value="重置"><br>
-    上　传：<input type="file"><br>
+    <form action="study_code001.html" method="post" name="userInfo">
+        用户名：<input type="text" size="10"><br>
+        密　码：<input type="password" maxlength="6"><br>
+        性　别：<input type="radio" name="sex">男<input type="radio" name="sex" checked>女<br>
+        爱　好：<input type="checkbox" name="hobby">足球<input type="checkbox" name="hobby" checked>冰球<input type="checkbox"
+                                                                                                       name="hobby">橄榄球<br>
+        确　定：<input type="button" value="确定"><br>
+        提　交：<input type="submit" value="提交"><br>
+        重　置：<input type="reset" value="重置"><br>
+        上　传：<input type="file"><br>
+    </form>
 </div>
 <h3>Label标签的使用</h3>
 <div>
@@ -33,6 +35,37 @@
         <option selected>广安</option>
         <option>遂宁</option>
     </select>
+</div>
+<h3>datalist的使用</h3>
+<div>
+    <input type="text" list="star"><input type="button" value="百度一下，你就知道了">
+    <datalist id="star">
+        <option>周杰伦</option>
+        <option>周杰</option>
+        <option>周建</option>
+        <option>Beyond</option>
+        <option>程子涵</option>
+        <option>程芳</option>
+        <option>程昱</option>
+    </datalist>
+</div>
+<h3>fieldset标签的使用</h3>
+<div>
+    <fieldset>
+        <legend>登陆</legend>
+        <label>用户名：<input type="text"></label><br>
+        <label>密　码：<input type="password"></label>
+    </fieldset>
+</div>
+<h3>html5中input的新属性</h3>
+<div>
+    只有拖动：<input type="range"><br>
+    搜 索 框：<input type="search"><br>
+    时间：<input type="time"><br>
+    日期：<input type="date"><br>
+    datetime：<input type="datetime"><br>
+    month：<input type="month"><br>
+    week：<input type="week">
 </div>
 </body>
 </html>
