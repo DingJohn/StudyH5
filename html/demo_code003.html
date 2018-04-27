@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生档案管理demo</title>
+</head>
+<body>
+<form action="study_code001.html" method="post" name="studentInfo">
+    <fieldset>
+        <legend>学生档案管理录入系统</legend>
+        姓　　名：<input type="text" placeholder="请输入学生姓名" autofocus required autocomplete="on" name="name"><br>
+        手 机 号：<input type="tel" placeholder="请输入学生手机号" required autocomplete="on" name="phone"><br>
+        邮　　箱：<input type="email" placeholder="请输入学生邮箱" required autocomplete="on" name="email"><br>
+        学　　院：<input type="text" placeholder="请选择学院" list="school" required autocomplete="on" name="school"><br>
+        <datalist id="school">
+            <option>外语学院</option>
+            <option>数学学院</option>
+            <option>计算机学院</option>
+            <option>通信学院</option>
+            <option>生物学院</option>
+            <option>传媒学院</option>
+            <option>教育学院</option>
+            <option>电工学院</option>
+            <option>电力学院</option>
+        </datalist>
+        生　　日：<input type="date" required autocomplete="on" name="brirthday"><br>
+        成　　绩：<input type="number" placeholder="请输入成绩" required autocomplete="on" name="score"><br>
+        毕业时间：<input type="date" required autocomplete="on" name="date"><br>
+        <input type="submit"> <input type="reset">
+    </fieldset>
+</form>
+</body>
+</html>
