@@ -1,0 +1,23 @@
+1.多媒体标签
+    1.embed：标签定义嵌入的内容
+    2.auto：插入音频文件
+        1.src：音频文件地址
+        2.autoplay：自动播放
+        3.controls：是否显示播放控件，可在控件中设置音频声音及播放进度
+        4.loop：循环播放，loop="2"指循环两次，loop="-1"值无限循环
+        5.由于版权因素，不同的浏览器可播放格式不一样，解决方式是将音频文件转换为三种格式，语法如下：
+            <audio>
+                <source src="音频.mp3"/>
+                <source src="音频.wav"/>
+                <source src="音频.ogg"/>
+            </audio>
+    3.video：插入视频文件
+        1.属性与auto一样
+        2.width：视频宽度
+        3.height：视频高度
+        4.版权因素，引用方式如auto，语法如下：
+            <video>
+                <source src="视频.mp4"/>
+                <source src="视频.webM"/>
+                <source src="视频.ogg"/>
+             </video>
