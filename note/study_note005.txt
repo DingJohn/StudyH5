@@ -1,0 +1,3 @@
+1.font的综合用法：
+    1.选择器 { font: font-style font-weight font-size/line-height font-family;}
+    2.以上语法必须遵循先后顺序，不许要的可省略，但是font-size和font-family属性不可省略，否则font属性不起效果
