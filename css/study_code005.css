@@ -1,0 +1,28 @@
+div {
+    font: 12px "华文宋体";
+    color: blue;
+}
+
+p {
+    color: aquamarine;
+}
+
+span {
+    font-size: 100px;
+}
+
+.blue {
+    color: blue;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.orange {
+    color: orange;
+}
