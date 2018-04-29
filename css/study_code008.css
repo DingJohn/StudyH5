@@ -1,0 +1,38 @@
+div:first-child {
+    background-color: #ccc;
+}
+
+div > div {
+    color: #cccccc;
+    font: 150px "宋体";
+}
+
+div > div:first-child {
+    text-shadow: 1px 1px 1px #000, -1px -1px 1px #fff;
+}
+
+div > div:last-child {
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #000;
+}
+
+.click {
+    background-color: black;
+    height: 200px;
+}
+
+.click a {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 200px;
+    height: 50px;
+    color: white;
+    display: inline-block;
+    font: 20px "微软雅黑";
+    text-align: center;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: orange;
+}
