@@ -1,0 +1,15 @@
+.site-r a {
+    color: red;
+}
+
+li a {
+    color: green;
+}
+
+li a, .sitenav {
+    font: 14px "微软雅黑";
+}
+
+.nav > ul > li > a {
+    color: skyblue;
+}
