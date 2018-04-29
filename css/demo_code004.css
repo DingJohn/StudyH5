@@ -1,0 +1,47 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: #3c3c3c;
+}
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.header span {
+    font-size: 14px;
+}
+
+.header span a:link {
+    color: blue;
+}
+
+.header span a:visited {
+    color: #8E458A;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content {
+    font-size: 14px;
+    color: #747376;
+}
+
+.content p {
+    text-indent: 2em;
+    line-height: 22px;
+    letter-spacing: 2px;
+}
+
+.content p span a:link {
+    color: #AFACD0;
+}
