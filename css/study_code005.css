@@ -26,3 +26,36 @@ span {
 .orange {
     color: orange;
 }
+
+a:link {
+    font-size: 12px;
+    color: #333333;
+}
+
+a:visited {
+    color: red;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: blueviolet;
+}
+
+/*li:nth-last-child(even) {*/
+/*color: blue;*/
+/*}*/
+
+/*li:nth-child(odd) {*/
+/*color: red;*/
+/*}*/
+
+/*li:nth-last-of-type(even) {*/
+/*color: blueviolet;*/
+/*}*/
+
+li:nth-of-type(even){
+    color: red;
+}
