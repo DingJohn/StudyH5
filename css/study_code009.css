@@ -1,0 +1,35 @@
+ul li {
+    /*权重 0,0,0,2*/
+    color: red;
+}
+
+li {
+    /*权重 0,0,0,1  所以执行上面的样式*/
+    color: burlywood;
+}
+
+.border {
+    width: 200px;
+    height: 300px;
+    border-width: 2px;
+    border-color: black;
+    border-style: double;
+}
+
+input {
+    border: 1px red solid;
+}
+
+table {
+    width: 300px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td {
+    border: 1px skyblue solid;
+}
+
+th {
+    border: 1px skyblue solid;
+}
