@@ -21,5 +21,10 @@
             5.double：边框为双实线
         3.border-color:边框的颜色
         4.border-collapse: collapse：合并边框
+     2.内边距
+        1.padding-top：距离上方的内边距
+        1.padding-left：距离左侧的内边距
+        1.padding-right：距离右侧的内边距
+        1.padding-bottom：距离底部的内边距
 3.浮动
 4.
