@@ -42,3 +42,13 @@ th {
     padding-right: 10px;
     padding-top: 10px;
 }
+
+span {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    margin: 30px auto;
+}
