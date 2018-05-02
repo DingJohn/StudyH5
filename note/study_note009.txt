@@ -21,10 +21,32 @@
             5.double：边框为双实线
         3.border-color:边框的颜色
         4.border-collapse: collapse：合并边框
-     2.内边距
+    2.内边距
         1.padding-top：距离上方的内边距
-        1.padding-left：距离左侧的内边距
-        1.padding-right：距离右侧的内边距
-        1.padding-bottom：距离底部的内边距
+        2.padding-left：距离左侧的内边距
+        3.padding-right：距离右侧的内边距
+        4.padding-bottom：距离底部的内边距
+    3.外边距
+       1.margin-top：距离上方的外边距
+       2.margin-left：距离左侧的外边距
+       3.margin-right：距离右侧的外边距
+       4.margin-bottom：距离底部的外边距
+       5.外边距实现盒子居中
+            1.必须是块级元素
+            2.盒子必须指定宽度
+            3.设置盒子的左右margin值为auto
+       6.行内元素只有左右边距没有上下边距(实际开发过程中，尽量不要对行内元素设置上边边距)
+    4.背景图和插入图片更改大小及位置
+        1.大小
+            1.背景图片使用background-size更改图片大小
+            2.插入图片使用width和height更改图片大小
+        2.位置
+            1.背景图片使用background-position更改图片位置
+            2.插入图片可以使用margin和padding更改图片位置
+        3.用处
+            1.背景图片
+                1.小图片，logo，banner
+            2.插入图片
+                1. 产品展示
 3.浮动
 4.
