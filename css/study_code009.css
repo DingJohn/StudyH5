@@ -52,3 +52,19 @@ span {
     text-align: center;
     margin: 30px auto;
 }
+
+.father {
+    width: 200px;
+    height: 200px;
+    background-color: #8E458A;
+    /*border: 1px #8E458A solid; 第一种方式*/
+    /*padding-top: 1px; 第二种方式*/
+    overflow: hidden; /*第三种方式*/
+}
+
+.son {
+    width: 150px;
+    height: 150px;
+    background-color: #AFACD0;
+    margin-top: 25px;
+}
