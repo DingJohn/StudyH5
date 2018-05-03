@@ -1,0 +1,18 @@
+1.CSS3盒模型
+    1.CSS3中通过box-sizing来指定盒模型，即可指定为content-box、border-box，这样我们计算盒子大小的方式就发生了改变。如：
+        1.box-sizing:content-box：盒子大小为width + padding + border，此为默认值
+        2.box-sizing:border-box：盒子大小为width，也就是padding和border的宽度包含在width中
+    2.盒子阴影,语法格式：
+        box-shadow: 水平位置 垂直位置 模糊距离 阴影尺寸 阴影颜色 内/外阴影
+        1.属性值：
+            1.h-shadow：必须。水平阴影的位置，允许负值
+            2.v-shadow：必须。垂直阴影的位置，允许负值
+            3.blur：可选。模糊距离
+            4.spread：可选。阴影的尺寸
+            5.color：可选。阴影的颜色，参考CSS颜色值
+            6.inset：可选。将外部阴影(outset)改为内部阴影
+            7.PS：默认为外阴影，但是代码中不能写外阴影(outset)，否则阴影将不会显示。
+2.浮动
+    1.盒子的定位机制：普通流（标准流）、浮动、定位
+        1.标准流（普通流）：通俗将讲，就是网页内标签从上到下，从左到右的方式
+        2.
