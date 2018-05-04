@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.top,
+.banner,
+.main,
+.footer {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+.top {
+    background-color: #8E458A;
+    height: 100px;
+}
+
+.banner {
+    background-color: #3c3c3c;
+    height: 150px;
+}
+
+.main {
+    background-color: #d9e0ee;
+    height: 600px;
+}
+
+.footer {
+    background-color: #ff8400;
+    height: 200px;
+}
