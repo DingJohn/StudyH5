@@ -1,0 +1,45 @@
+.top,
+.banner,
+.main,
+.footer {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px dashed #ccc;
+    margin-bottom: 10px;
+}
+
+.top {
+    height: 150px;
+    background-color: #AFACD0;
+    line-height: 150px;
+}
+
+.banner {
+    height: 100px;
+    line-height: 100px;
+    background-color: #8E458A;
+}
+
+.main {
+    height: 500px;
+    line-height: 500px;
+}
+
+.left {
+    width: 25%;
+    background-color: #d9e0ee;
+    float: left;
+}
+
+.right {
+    width: 74%;
+    background-color: #eaeaea;
+    float: right;
+}
+
+.footer {
+    height: 200px;
+    line-height: 200px;
+    background-color: #ff8400;
+}
