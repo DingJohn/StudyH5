@@ -1,0 +1,52 @@
+.fl div:first-child {
+    width: 200px;
+    height: 100px;
+    background-color: orange;
+    float: left;
+}
+
+.fl div:last-child {
+    width: 300px;
+    height: 150px;
+    background-color: red;
+    float: left; /*如果不加此句，就会跑到第一个div的下方*/
+}
+
+.top {
+    margin-top: 300px;
+}
+
+.t1 {
+    width: 100px;
+    height: 100px;
+    background-color: #ff8400;
+    float: left;
+}
+
+.t2 {
+    width: 100px;
+    height: 200px;
+    float: left;
+    background-color: #FFC1C1;
+}
+
+.footer {
+    width: 210px;
+    height: 200px;
+    background-color: #8E458A;
+}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
