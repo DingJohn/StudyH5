@@ -1,0 +1,39 @@
+.mouse li:first-child {
+    cursor: default;
+}
+
+.mouse li:nth-child(2) {
+    cursor: pointer;
+}
+
+.mouse li:nth-child(3) {
+    cursor: move;
+}
+
+.mouse li:last-child {
+    cursor: text;
+}
+
+input:last-child {
+    outline: 0;
+}
+
+textarea:last-child {
+    width: 400px;
+    height: 100px;
+    outline: 0;
+    resize: none;
+    border: 1px solid #FFB90F;
+}
+
+.tt {
+    width: 100px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 20px;
+    border: 1px solid red;
+    /*对溢出部分文字做裁剪必须有的步骤*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
