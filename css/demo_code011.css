@@ -1,0 +1,12 @@
+div img {
+    width: 200px;
+    height: 200px;
+    left: 100px;
+    top: 0px;
+    position: absolute;
+    display: none;
+}
+
+div:first-child:hover img {
+    display: block;
+}
