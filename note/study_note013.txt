@@ -1,0 +1,19 @@
+1、滑动门
+    1、精灵图片与padding技术的综合
+    2、案例仿微信网站nav
+2、before和after伪元素(本质上是插入了一个盒子，是一个行内元素)
+    1、伪元素的content值必须有值，否则伪元素无效
+    2、伪元素不占用位置
+    3、伪元素可以设置背景颜色，border等值
+3、过渡（CSS3新特性，谁的动画给谁加）
+    1、语法：transition: 要过度的属性 花费时间 运动曲线 何时开始;(如有多组属性变化，则以逗号隔开,如果属性值相同，则第一个值传all即可)
+    2、transition：简写属性，用于在一个属性中设置4个过渡属性
+    3、transition-property：规定应用于过渡的CSS属性名称
+    4、transition-duration：定义过渡花费的时间，默认为0
+    5、transition-timing-function：规定过渡效果的曲线，默认为“ease”
+        1、linear：匀速移动
+        2、ease：逐渐慢下来
+        3、ease-in：加速
+        4、ease-out:减速
+        5、ease_in_out：先加速后减速
+    6、transition-delay：规定过渡效果何时开始，默认为0
