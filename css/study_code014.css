@@ -1,0 +1,39 @@
+.bx, .sf, .xz, .zxd, .qx {
+    width: 98px;
+    height: 86px;
+    background-color: #FFB90F;
+    transition: all 3s;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.qx {
+    border: 1px solid #8E458A;
+}
+
+.bx:active {
+    transform: translate(0, 20px); /*x坐标移动20像素，y坐标移动20像素*/
+}
+
+.sf img {
+    width: 98px;
+    height: 86px;
+    transition: all 3s;
+}
+
+.sf:hover img {
+    transform: scale(2, 2);
+}
+
+.xz:hover {
+    transform: rotate(-45deg);
+}
+
+.zxd:hover {
+    transform-origin: right bottom;
+    transform: rotate(360deg);
+}
+
+.qx:hover {
+    transform: skew(0deg, -30deg);
+}
