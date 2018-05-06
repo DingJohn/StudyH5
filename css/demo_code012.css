@@ -1,0 +1,58 @@
+section {
+    width: 600px;
+    height: 400px;
+    background: url(../img/index_06-03.jpg) no-repeat;
+    margin: 100px auto;
+    border: 1px saddlebrown solid;
+    position: relative;
+    perspective: 1000px;
+}
+
+.door-l,
+.door-r {
+    width: 50%;
+    height: 100%;
+    background-color: #FFB90F;
+    top: 0;
+    position: absolute;
+    border: 1px solid crimson;
+    transition: all 5s;
+}
+
+.door-l {
+    left: 0;
+    transform-origin: left;
+}
+
+.door-r {
+    right: 0;
+    transform-origin: right;
+}
+
+.door-l::before,
+.door-r::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px white solid;
+    border-radius: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.door-l::before {
+    right: 10px;
+}
+
+.door-r::before {
+    left: 5px;
+}
+
+section:hover .door-l {
+    transform: rotateY(-180deg);
+}
+
+section:hover .door-r {
+    transform: rotateY(180deg);
+}
