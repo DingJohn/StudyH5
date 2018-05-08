@@ -1,0 +1,123 @@
+body {
+    max-width: 540px;
+    min-width: 320px;
+    max-height: 487px;
+    min-height: 444px;
+    display: flex;
+    margin: 10px auto;
+    flex-direction: column;
+}
+
+header {
+}
+
+header img {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+    max-height: 380px;
+    min-height: 320px;
+    flex: 1;
+    margin: 0 4px 0 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hotel,
+.ticket,
+.tourism,
+.feature {
+    width: 100%;
+    height: 90px;
+    border-radius: 8px;
+    display: flex;
+}
+
+.hotel {
+    background-color: #FF697A;
+}
+
+.ticket {
+    background-color: #3D98FF;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.tourism {
+    background-color: #44C522;
+}
+
+.feature {
+    background-color: #FC9720;
+    margin-top: 4px;
+}
+
+.hotel div,
+.ticket div,
+.tourism div,
+.feature div {
+    min-width: 102px;
+    max-width: 177px;
+    float: left;
+    flex: 1;
+    text-align: center;
+    position: relative;
+    font-size: 15px;
+}
+
+.hotel-text,
+.ticket-text,
+.tourism-text {
+    line-height: 45px;
+    color: white;
+}
+
+.hotel-text img,
+.ticket-text img,
+.tourism-text img {
+    width: 43px;
+    height: 43px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -21px;
+    margin-top: -7px;
+}
+
+.hotel-sale,
+.ticket-train,
+.tourism-ambitus,
+.feature-wifi {
+    border-left: 1px white solid;
+    border-right: 1px white solid;
+}
+
+.hotel-sale a,
+.hotel-inn a,
+.ticket-train a,
+.ticket-car a,
+.tourism-ambitus a,
+.tourism-steamer a,
+.feature-text a,
+.feature-wifi a,
+.feature-insure a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    line-height: 45px;
+}
+
+.hotel-sale a:first-child,
+.hotel-inn a:first-child,
+.ticket-car a:first-child,
+.ticket-train a:first-child,
+.tourism-ambitus a:first-child,
+.tourism-steamer a:first-child,
+.feature-text a:first-child,
+.feature-wifi a:first-child,
+.feature-insure a:first-child {
+    border-bottom: 1px white solid;
+}
+
