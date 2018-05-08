@@ -1,0 +1,89 @@
+.first,
+.more {
+    width: 100px;
+    height: 100px;
+    background-color: #FFB90F;
+}
+
+.first:hover {
+    animation: go 2s;
+}
+
+@keyframes go {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(400px);
+    }
+}
+
+.more:hover {
+    animation: go1 2s;
+}
+
+@keyframes go1 {
+    0% {
+        transform: translateY(0px);
+    }
+    40% {
+        transform: translateY(200px);
+    }
+    100% {
+        transform: translateX(400px);
+    }
+}
+
+.car img {
+    width: 121px;
+    animation: ru 10s;
+}
+
+@keyframes ru {
+    0% {
+        transform: translateX(0px) rotateY(180deg);
+    }
+    50% {
+        transform: translateX(500px) rotateY(180deg);
+    }
+    51% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.gg {
+    width: 635px;
+    height: 52px;
+    border: 1px #FFB90F solid;
+    margin: 100px auto;
+    overflow: hidden;
+}
+
+.gg ul {
+    width: 200%;
+    animation: gg 5s linear infinite;
+}
+
+@keyframes gg {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-635px);
+    }
+}
+
+.gg ul li {
+    float: left;
+}
+
+.gg:hover ul {
+    animation-play-state: paused;
+}
+
+.gg img {
+    width: 127px;
+}
