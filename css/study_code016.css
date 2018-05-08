@@ -1,0 +1,28 @@
+.qz {
+    width: 80%;
+    height: 200px;
+    border: 1px #d9e0ee solid;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.qz div {
+    height: 100%;
+    color: white;
+}
+
+.qz div:nth-child(1) {
+    background-color: #ff8400;
+    flex: 1;
+}
+
+.qz div:nth-child(2) {
+    background-color: #8E458A;
+    flex: 2;
+    margin: 0 5px;
+}
+
+.qz div:nth-child(3) {
+    background-color: #CDC9A5;
+    flex: 1;
+}
