@@ -1,0 +1,411 @@
+@font-face {
+    font-family: 'icomoon';
+    src: url('../../fonts/icomoon.eot?xokuqk');
+    src: url('../../fonts/icomoon.eot?xokuqk#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?xokuqk') format('truetype'),
+    url('../../fonts/icomoon.woff?xokuqk') format('woff'),
+    url('../../fonts/icomoon.svg?xokuqk#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shopping-cart:before {
+    content: "\e901";
+}
+
+.icon-camera-outline:before {
+    content: "\e902";
+}
+
+.icon-cheveron-down:before {
+    content: "\e900";
+}
+
+.icon-location:before {
+    content: "\e947";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
+.w {
+    width: 1190px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #F0F3EF;
+    font-family: icomoon;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+    color: #ADADAE;
+}
+
+a:hover {
+    color: #E33333;
+}
+
+ul,
+button,
+input,
+span {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/*header开始*/
+header {
+    height: 80px;
+    background-color: #033881;
+}
+
+.header {
+    position: relative;
+}
+
+.header span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(13, 51, 105, .5);
+    text-align: center;
+    line-height: 20px;
+    color: #4C72A8;
+    font-weight: bold;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+/*header结束*/
+
+/*快速导航栏开始*/
+.shorcut {
+    height: 30px;
+    background-color: #E3E4E5;
+    border-bottom: 1px solid #DDD;
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.fl {
+    padding: 0 7px;
+    margin-left: 200px;
+}
+
+.location {
+    color: #ADADAE;
+}
+
+.fl li span {
+    color: #F10215;
+    font-size: 14px;
+    line-height: 28px;
+    margin-right: 4px;
+}
+
+.location img {
+    width: 14px;
+    height: 14px;
+    padding-right: 4px;
+}
+
+.fr {
+    margin-right: 12px;
+}
+
+.fr_text {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.fr_text span {
+    color: #ADADAE;
+    font-size: 12px;
+}
+
+.fr_text .register {
+    color: #F10215;
+    padding-left: 4px;
+}
+
+.fr_text .register:hover {
+    color: #E33333;
+}
+
+.fr li {
+    float: left;
+}
+
+.fr_line {
+    width: 1px;
+    height: 10px;
+    border-right: 1px solid #ccc;
+    margin: 10px 6px 10px 6px;
+}
+
+.web_nav,
+.customer_service,
+.phone_jd {
+    color: #ADADAE;
+}
+
+.phone_jd {
+    position: relative;
+}
+
+.phone_jd img {
+    width: 67px;
+    height: 67px;
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    margin-right: -12px;
+    padding: 4px;
+    border: 1px solid #CFCFCF;
+}
+
+.fl:hover,
+.my_jd:hover,
+.customer_service:hover,
+.web_nav:hover {
+    box-sizing: border-box;
+    background-color: #fff;
+    border-top: 1px solid #CCC;
+    border-left: 1px solid #CCC;
+    border-right: 1px solid #CCC;
+}
+
+/*快速导航栏结束*/
+
+/*头部开始*/
+#header {
+    height: 140px;
+    position: relative;
+}
+
+.logo {
+    width: 190px;
+    height: 170px;
+    background: url("../../img/jdimg/sprite.head.png") no-repeat;
+    position: absolute;
+    left: 0;
+    top: -31px;
+    box-shadow: 0 -12px 10px rgba(0, 0, 0, .2);
+    border-bottom: 1px solid #EDEDED;
+}
+
+.search {
+    width: 550px;
+    height: 34px;
+    position: absolute;
+    left: 320px;
+    top: 24px;
+    float: left;
+}
+
+.input {
+    width: 500px;
+    height: 34px;
+    background-color: #fff;
+    float: left;
+}
+
+.input input {
+    width: 450px;
+    height: 34px;
+    font-size: 12px;
+    border: none;
+    box-sizing: border-box;
+    outline: none;
+    padding: 5px;
+    float: left;
+}
+
+.input span {
+    font-size: 24px;
+    color: #919191;
+    float: left;
+    margin-top: 3px;
+    margin-left: 6px;
+}
+
+.input span:hover {
+    color: #F10215;
+}
+
+.search button {
+    font-size: 18px;
+    color: white;
+    width: 48px;
+    height: 34px;
+    background-color: #F10215;
+    border: none;
+    box-sizing: border-box;
+    float: left;
+}
+
+.shopping_car {
+    width: 188px;
+    height: 32px;
+    color: #F10215;
+    background-color: #fff;
+    position: absolute;
+    top: 24px;
+    right: 0;
+    margin-right: 96px;
+    border: 1px solid #E3E4E5;
+    text-align: center;
+}
+
+.shopping_car span:first-child {
+    font-size: 20px;
+}
+
+.shopping_car span:nth-child(2) {
+    font-size: 12px;
+}
+
+.tj {
+    position: absolute;
+    left: 320px;
+    top: 66px;
+    font-size: 12px;
+    color: #999;
+}
+
+.tj ul li {
+    float: left;
+    margin-right: 10px;
+}
+
+.tj ul li:first-child a {
+    color: #F10215;
+}
+
+.tj ul li a:hover {
+    color: #C81623;
+}
+
+.title {
+    height: 40px;
+    position: relative;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.title ul {
+    position: absolute;
+    left: 200px;
+    top: 70px;
+    padding-top: 30px;
+}
+
+.title ul a {
+    color: #5C5C5C;
+}
+
+.title ul li {
+    float: left;
+    margin-left: 30px;
+}
+
+.title ul li:nth-child(6),
+.title ul li:nth-child(11) {
+    margin-left: 0;
+}
+
+.title .title_line {
+    width: 1px;
+    height: 10px;
+    border-right: 1px solid #ccc;
+    margin: 15px 20px;
+}
+
+.gg li img {
+    float: left;
+    width: 190px;
+    height: 40px;
+    position: absolute;
+    left: 802px;
+    top: 0;
+    margin-top: 30px;
+}
+
+/*头部结束*/
+.fs {
+    height: 480px;
+    background-color: #AFACD0;
+    margin-bottom: 30px;
+}
+
+.fs_1 {
+    width: 190px;
+    background-color: #ADADAE;
+    margin-right: 10px;
+}
+
+.fs_2 {
+    width: 592px;
+    height: 468px;
+    background-color: #CDC9A5;
+    margin-right: 10px;
+}
+
+.fs_3 {
+    width: 192px;
+    margin-right: 10px;
+    background-color: #FF697A;
+}
+
+.fs_4 {
+    width: 190px;
+    background-color: #4C72A8;
+}
