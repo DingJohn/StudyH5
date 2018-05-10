@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'icomoon';
-    src: url('../../fonts/icomoon.eot?xokuqk');
-    src: url('../../fonts/icomoon.eot?xokuqk#iefix') format('embedded-opentype'),
-    url('../../fonts/icomoon.ttf?xokuqk') format('truetype'),
-    url('../../fonts/icomoon.woff?xokuqk') format('woff'),
-    url('../../fonts/icomoon.svg?xokuqk#icomoon') format('svg');
+    src: url('../../fonts/icomoon.eot?ulufn7');
+    src: url('../../fonts/icomoon.eot?ulufn7#iefix') format('embedded-opentype'),
+    url('../../fonts/icomoon.ttf?ulufn7') format('truetype'),
+    url('../../fonts/icomoon.woff?ulufn7') format('woff'),
+    url('../../fonts/icomoon.svg?ulufn7#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,22 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ctrr:before {
+    content: "\e903";
+}
+
+.icon-location:before {
+    content: "\e947";
+}
+
+.icon-search:before {
+    content: "\e986";
+}
+
+.icon-ctrl:before {
+    content: "\ea50";
+}
+
 .icon-shopping-cart:before {
     content: "\e901";
 }
@@ -34,14 +50,6 @@
 
 .icon-cheveron-down:before {
     content: "\e900";
-}
-
-.icon-location:before {
-    content: "\e947";
-}
-
-.icon-search:before {
-    content: "\e986";
 }
 
 .w {
@@ -330,7 +338,7 @@ header {
     color: #F10215;
 }
 
-.tj ul li a:hover {
+.tj ul li:hover {
     color: #C81623;
 }
 
@@ -345,7 +353,7 @@ header {
     position: absolute;
     left: 200px;
     top: 70px;
-    padding-top: 30px;
+    margin-top: 30px;
 }
 
 .title ul a {
@@ -376,36 +384,125 @@ header {
     position: absolute;
     left: 802px;
     top: 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 /*头部结束*/
 .fs {
     height: 480px;
-    background-color: #AFACD0;
     margin-bottom: 30px;
 }
 
 .fs_1 {
+    height: 100%;
     width: 190px;
-    background-color: #ADADAE;
+    background-color: #fff;
     margin-right: 10px;
+    float: left;
+    border-top: 1px solid #EDEDED;
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #626262;
+}
+
+.fs_1 ul li {
+    padding-top: 14px;
+}
+
+.fs_1 ul a:hover li {
+    background-color: #999;
 }
 
 .fs_2 {
-    width: 592px;
+    width: 590px;
     height: 468px;
-    background-color: #CDC9A5;
+    margin-top: 12px;
+    background: url("../../img/jdimg/banner.jpg") no-repeat;
     margin-right: 10px;
+    float: left;
+    position: relative;
+}
+
+.fs_2 .left,
+.fs_2 .right {
+    width: 24px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.fs_2 .left i,
+.fs_2 .right i {
+    font-size: 22px;
+    color: white;
+    font-style: normal;
+    line-height: 40px;
+}
+
+.fs_2 .left i {
+    margin-left: 6px;
+}
+
+.fs_2 .left {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -20px;
+}
+
+.fs_2 .right {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -20px;
+}
+
+.circle {
+    width: 152px;
+    height: 18px;
+    position: absolute;
+    left: 46px;
+    bottom: 20px;
+}
+
+.circle li {
+    width: 5px;
+    height: 5px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    float: left;
+    margin: 5px;
+}
+
+.circle li:nth-child(4) {
+    background-color: #fff;
+    border: 2px solid rgba(0, 0, 0, .4);
 }
 
 .fs_3 {
-    width: 192px;
+    height: 468px;
+    width: 190px;
+    margin-top: 12px;
     margin-right: 10px;
+    float: left;
+}
+
+.fs_3_top,
+.fs_3_middle,
+.fs_3_bottom {
+    height: 150px;
     background-color: #FF697A;
 }
 
+.fs_3_middle,
+.fs_3_bottom {
+    margin-top: 9px;
+}
+
 .fs_4 {
+    height: 468px;
     width: 190px;
+    margin-top: 12px;
     background-color: #4C72A8;
+    float: left;
 }
