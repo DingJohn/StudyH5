@@ -21,3 +21,4 @@
         1、perspective: xpx;一般给父元素设置，作用于所有的3D转换的子元素
     4、translate的3D属性
         1、translate3d(x , y , z)：z是指物体距离屏幕的距离，perspective是眼睛距离屏幕的距离
+    5、background-visibility：不是正向面对屏幕就隐藏
