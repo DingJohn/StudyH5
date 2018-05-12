@@ -1,20 +1,20 @@
-.head{
-    margin: 0px 0px 0px 0px;
+.head {
+    margin: 0 0;
 }
 
-.head-top{
+.head-top {
     background-color: #333;
 }
 
-.head-top p{
+.head-top p {
     color: white;
     float: left;
 }
 
-.head-top a{
+.head-top a {
     float: right;
 }
 
-.head-top2{
+.head-top2 {
     float: right;
 }
