@@ -30,7 +30,7 @@
     9.align-content：多行的垂直对齐，align-items是单行的
         1.必须对父元素设置display: flex，并设置排列方向为横列flex-direction: row，并设置换行flex-warp: warp时，此属性才会起作用
         2.flex-start：项目位于容器的开头
-        3.flex-end：项目为了容器的结尾
+        3.flex-end：项目位于容器的结尾
         4.center：项目位于容器的中心
         5.space-between：项目位于各行之间留有空白的容器内
         6.space-around：项目位于各行之前、之间、之后都有空白的容器内
