@@ -17,6 +17,7 @@ section {
     position: absolute;
     border: 1px solid crimson;
     transition: all 5s;
+    box-sizing: border-box;
 }
 
 .door-l {
@@ -42,7 +43,7 @@ section {
 }
 
 .door-l::before {
-    right: 10px;
+    right: 5px;
 }
 
 .door-r::before {
