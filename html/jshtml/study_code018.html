@@ -62,14 +62,55 @@
     // }
     // document.write("</table>");
 
-    // 计算本金
-    var lixi = 0.0003 * 10000;
-    for (var i = 0; i < 5; i++) {
-        
-        10000 + 10000 * lixi;
-        10000 + 10000 * lixi + (10000 + 10000 * lixi) * lixi;
-        (10000 + 10000 * lixi + (10000 + 10000 * lixi) * lixi+)
+    // 计算数组中的最大值及其下标
+    // var arr = [12, 245, 7, 23, 89, 12, 120, 34,];
+    // var maxNum = 0;
+    // var maxIndex = 0;
+    // for (var i = 0; i < arr.length; i++) {
+    //     if (arr[i] > maxNum) {
+    //         maxNum = arr[i];
+    //         maxIndex = i;
+    //     }
+    // }
+    // document.write("arr数组的最大值是：" + maxNum + "，它的下标是：" + maxIndex)
+
+    //    计算本金问题
+    // var money = 10000;
+    // var rate = 0.003;
+    // for (var i = 0; i < 5; i++) {
+    //     money += money * rate;
+    // }
+    // console.log("本金是：" + money)
+
+    // 斐波拉契数列
+    // var one = 1;
+    // var two = 1;
+    // var sum = 0;
+    // for (var i = 3; i <= 12; i++) {
+    //     sum = one + two;
+    //     one = two;
+    //     two = sum
+    // }
+    // console.log("第12个月一共有：" + sum + "只兔子")
+
+    //    找到100-200之间第一个被7整除的数
+    // for (var i = 100; i <= 200; i++) {
+    //     if (i % 7 == 0) {
+    //         console.log("第一个被7整除的数是：" + i);
+    //         break;
+    //     }
+    // }
+
+    // 求100-200之间所有奇数的和
+    var sum = 0;
+    for (var i = 100; i <= 200; i++) {
+        if (i % 2 == 0) {
+            continue;
+        }
+        sum += i;
     }
+    console.log("100-200之间所有奇数的和：" + sum);
+
 </script>
 </body>
 </html>
