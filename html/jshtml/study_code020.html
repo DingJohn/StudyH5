@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<script>
+
+    // 获取指定范围的素数
+    var arr = "";
+
+    function getSs(x) {
+        for (var i = 3; i <= x; i++) {
+            for (var j = 2; j <= i - 1; j++) {
+                if (i % j == 0) {
+                    break;
+                } else if (j + 1 == i && i % j != 0) {
+                    arr += "," + i;
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log("素数是：2" + getSs(100));
+
+    // 反转数组
+    function fzArr(arr) {
+        for (var i = 0; i < arr.length / 2; i++) {
+            var temp = arr[i];
+            arr[i] = arr[arr.length - 1 - i];
+            arr[arr.length - 1 - i] = temp;
+        }
+        return arr;
+    }
+
+    console.log("反转数组：" + fzArr([1, 2, 3, 4, 5, 6, 7, 8]))
+
+    // 冒泡排序
+    function sortMP(arr) {
+        for (var i = 0; i < arr.length - 1; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] < arr[j]) {
+                    var temp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        return arr;
+    }
+
+    console.log("排序后：" + sortMP([54, 234, 57, 345, 8343, 8, 3, 1, 7, 53, 8652, 46]))
+
+</script>
+</body>
+</html>
