@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+<script>
+    var arr = [10, 20, 0, 30, 40, 50, 0];
+    // 求和
+    var sum = 0;
+    for (var i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    console.log("和：" + sum);
+    console.log("平均数" + sum / arr.length);
+
+    // 倒序遍历数组
+    for (var i = arr.length; i > 0; i--) {
+        console.log("倒序遍历：" + arr[i - 1]);
+    }
+
+    // 重新拼接数组
+    var str = '';
+    for (var i = 1; i < arr.length; i++) {
+        str += "|" + arr[i];
+    }
+    console.log("拼接数组：" + arr[0] + str);
+
+    // 去除数组中多余的0，并存放到新数组
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] != 0) {
+            newArr[newArr.length] = arr[i];
+        }
+    }
+    console.log("去除0之后的新数组：" + newArr);
+
+    // 反转数组
+    var temp = [];
+    var j = arr.length;
+    for (var i = 0; i < arr.length; i++) {
+        temp[i] = arr[--j];
+    }
+    console.log("数组反转之后为：" + temp)
+
+    // 反转方法二
+    for (var i = 0; i < arr.length / 2; i++) {
+        var temp = arr[i];
+        arr[i] = arr[arr.length - 1 - i];
+        arr[arr.length - 1 - i] = temp;
+    }
+    console.log("反转之后的：" + arr);
+
+    // 根据用户输入人数计算班级总成绩，平均成绩，最高最低分
+    var perCount = parseInt(prompt("请输入班级人数："));
+    var perScore = [];
+    for (var i = 0; i < perCount; i++) {
+        perScore[i] = parseFloat(prompt("请输入学生的成绩："));
+    }
+    var sum = 0;
+    var avg = 0;
+    var maxScore = perScore[0];
+    var minScore = perScore[0];
+    for (var i = 0; i < perScore.length; i++) {
+        // 计算总成绩
+        sum += perScore[i];
+        if (maxScore < perScore[i]) {
+            maxScore = perScore[i];
+        }
+        if (minScore > perScore[i]) {
+            minScore = perScore[i];
+        }
+    }
+    avg = sum / perCount;
+    console.log("班级总人数：" + perCount + "，总成绩：" + sum + "，平均分：" + avg + "，最高分：" + maxScore + "，最低分：" + minScore);
+
+    // 冒泡排序
+    var arrNum = [9, 2, 67, 23, 68, 234, 78, 7, 567, 23];
+    for (var i = 0; i < arrNum.length; i++) {
+        for (var j = 0; j < arrNum.length; j++) {
+            if (arrNum[i] < arrNum[j]) {
+                var temp = arrNum[i];
+                arrNum[i] = arrNum[j];
+                arrNum[j] = temp;
+            }
+        }
+    }
+    console.log("排序后：" + arrNum);
+
+</script>
+</body>
+</html>
