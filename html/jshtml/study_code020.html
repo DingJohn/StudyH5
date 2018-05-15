@@ -7,6 +7,22 @@
 <body>
 <script>
 
+    //函数的自调用
+    (function () {
+        console.log("函数的自调用");
+    })();
+
+
+    function f1() {
+        return function () {
+            console.log("作为返回值的参数调用了");
+        };
+    }
+
+    var ff = f1();
+    ff();
+
+
     // 获取指定范围的素数
     var arr = "";
 
@@ -35,7 +51,7 @@
         return arr;
     }
 
-    console.log("反转数组：" + fzArr([1, 2, 3, 4, 5, 6, 7, 8]))
+    console.log("反转数组：" + fzArr([1, 2, 3, 4, 5, 6, 7, 8]));
 
     // 冒泡排序
     function sortMP(arr) {
@@ -51,7 +67,59 @@
         return arr;
     }
 
-    console.log("排序后：" + sortMP([54, 234, 57, 345, 8343, 8, 3, 1, 7, 53, 8652, 46]))
+    console.log("排序后：" + sortMP([54, 234, 57, 345, 8343, 8, 3, 1, 7, 53, 8652, 46]));
+
+    // 计算指定日期是当年的第几天
+    function getDay(year, month, day) {
+        var days = day;
+        var dayArr = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        if (month == 1) {
+            return days;
+        }
+        for (var i = 0; i < month - 1; i++) {
+            days += dayArr[i];
+        }
+        if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0 && month > 2) {
+            days++;
+        }
+        return days;
+    }
+
+    console.log("是今年的第：" + getDay(2000, 3, 1) + "天")
+
+    // 求阶乘和
+    function jcH(num) {
+        var sum = 0;
+        var jc = 1;
+        for (var i = 1; i <= num; i++) {
+            sum += (jc *= i);
+        }
+        return sum;
+    }
+
+    console.log("阶乘和：" + jcH(5));
+
+    // arguments的使用
+    function getSum() {
+        var sum = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            sum += arguments[i];
+        }
+        return sum;
+    }
+
+    console.log("和为：" + getSum(1, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+    function f(fun) {
+        fun();
+    }
+
+    function a() {
+        console.log("作为参数的函数调用了");
+    }
+
+    f(a);
+
 
 </script>
 </body>
