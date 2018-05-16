@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象</title>
+</head>
+<body>
+<script>
+    // 对象的初使用
+    // 采用第一种方法创建
+    var student = new Object();
+    student.name = "周三";
+    student.age = 10;
+    student.sex = 1;
+
+    student.play = function () {
+        console.log("I like play football");
+    };
+
+    student.cook = function () {
+        console.log("buy feet");
+        console.log("eat feet");
+    };
+
+    console.log(student.name);
+    console.log(student.age);
+    student.cook();
+
+
+    //    工厂模式（系统构造方法）
+
+    function personal(name, sex, age) {
+        var personal = new Object();
+        personal.name = name;
+        personal.age = age;
+        personal.sex = sex;
+        personal.say = function () {
+            console.log("Hello,My name is " + this.name + ",I'm " + this.sex + ",and " + this.age + "years old!");
+        };
+        return personal;
+    }
+
+    var andy = personal("Andy", 18, "boy");
+    andy.say();
+    var kevin = personal("Kevin", 21, "girl");
+    kevin.say();
+
+
+    //自定义构造函数
+    function Personal(name, age) {
+        this.name = name;
+        this.age = age;
+        this.sayHi = function () {
+            console.log(name + age);
+        }
+    }
+
+    var ob = new Personal("Andy", 10);
+    ob.sayHi();
+    console.log(ob);
+
+
+    //案例1，图片展示
+    function Pic(width, height, size) {
+        this.width = width;
+        this.height = height;
+        this.size = size;
+        this.show = function () {
+            console.log("这里展示了一张宽" + this.width + "，高" + this.height + "，" + this.size + "的图片");
+        };
+    }
+
+    var pic = new Pic(100, 200, "3M");
+    pic.show();
+
+
+    //案例2，猫的对象
+    function Cat(color, weight, age) {
+        this.color = color;
+        this.age = age;
+        this.weight = weight;
+        this.eatMouse = function () {
+            console.log("一只" + this.color + this.age + "岁的猫在抓耗子");
+        };
+        this.play = function () {
+            console.log("一只体重" + this.weight + "的猫在打架");
+        };
+    }
+
+    var cat = new Cat("黄色", "2kg", 3);
+    // cat.eatMouse();
+    // cat.play();
+    cat["color"] = "小黑";
+    cat["eatMouse"]();
+
+    //字面量的方式创建对象
+    var teacher = {
+        name: "小红",
+        age: 40,
+        teach: function () {
+            console.log(this.name + "正在上课");
+        }
+    };
+
+    teacher.teach();
+
+</script>
+</body>
+</html>
