@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>预解析</title>
+</head>
+<body>
+<script>
+    f1();
+    console.log("c1" + c);
+    console.log("b1" + b);
+    console.log("a1" + a);
+
+    function f1() {
+        // var a;
+        // a = 9;
+        // b = 9;
+        // c=9;
+        var a = b = c = 9;
+        console.log("a2" + a);
+        console.log("b2" + b);
+        console.log("c2" + c);
+    }
+</script>
+</body>
+</html>
