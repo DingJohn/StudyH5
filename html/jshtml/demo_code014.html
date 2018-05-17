@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+</head>
+<script>
+
+    //创建一个电脑对象,有颜色,有重量,有品牌,有型号,可以看电影,可以听音乐,可以打游戏,可以敲代码
+    var com1 = new Object();
+    com1.color = "黄色";
+    com1.weight = "34kg";
+    com1.brand = "宏碁";
+    com1.watch = function () {
+        console.log("一台" + this.color + "的电脑可以看电视");
+    };
+    com1.listen = function () {
+        console.log("一台" + this.weight + "重的电脑可以听音乐");
+    };
+    com1.play = function () {
+        console.log("一台" + this.brand + "电脑可以打游戏");
+    };
+    com1.coding = function () {
+        console.log("这台电脑可以写代码");
+    };
+
+    console.log(com1.color);
+    com1.coding();
+
+    function Computer(color, weight, brand) {
+        this.color = color;
+        this.weight = weight;
+        this.brand = brand;
+        this.watch = function () {
+            console.log("一台" + this.color + "的电脑可以看电视");
+        };
+        this.coding = function () {
+            console.log("这台" + this.weight + "重的电脑可以写代码");
+        };
+    }
+
+    var c1 = new Computer("黄色", "12kg", "Dell");
+    console.log("品牌是：" + c1.brand);
+    c1.coding();
+
+
+    //Math对象
+    //求绝对值
+    console.log(Math.abs(-12));
+    //求次幂
+    console.log(Math.pow(2, 3));
+    //求最大数
+    console.log(Math.max(-1, -56, 34, 6, 9, 1, 0, 103, 6, -100, 34, 5, 24, 44));
+    //求最小数
+    var arr = [-1, -56, 34, 6, 9, 1, 0, 3, 6, -100, 34, 5, 24, 44];
+    console.log(Math.min(...arr));//如果要传入的参数是一个数组，则需要在数组名前加三个.
+
+    //String
+
+    // Date
+
+    //Array
+
+</script>
+<body>
+
+</body>
+</html>
