@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--不推荐，不方便维护-->
+<input type="button" value="点击弹框" onclick="alert('hello world!')">
+<input type="button" value="点击弹框" id="btnAlert">
+<script>
+    document.getElementById("btnAlert").onclick = function () {
+        alert("打工，那是不可能的")
+    };
+</script>
+</body>
+</html>
