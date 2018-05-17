@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #color {
+            width: 100px;
+            height: 100px;
+            background-color: #FF8C00;
+        }
+    </style>
+    <script src="../../js/js/study_code023.js"></script>
+    <script>
+        function getColor() {
+            var strColor = "#";
+            var arrColor = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
+            for (var i = 0; i < 6; i++) {
+                strColor += arrColor[parseInt(Math.random() * 16)];
+            }
+            return strColor;
+        }
+
+        window.onload = function () {
+            document.getElementById("color").style.backgroundColor = getColor();
+        };
+
+        document.write(formatDate(new Date()));
+
+    </script>
+    <script>
+        //查询指定的字符出现的次数
+        var str = "Life is a journey. What we should care about is not where it's headed but what we see and how we feel.";
+        var index = 0;
+        var key = "a";
+
+        while ((index = str.indexOf(key, index)) != -1) {
+            console.log("a出现的下标是：" + index);
+            index += key.length;
+        }
+
+        str = "LifeisajourneyWhatweshouldcareaboutisnotwhereitisheadedbutwhatweseeandhowwefeel";
+        str = str.toLowerCase();
+        var strObj = new Object();
+        for (var i = 0; i < str.length; i++) {
+            if (strObj[str[i]]) {
+                strObj[str[i]]++;
+            } else {
+                strObj[str[i]] = 1;
+            }
+        }
+
+        for (var key in strObj) {
+            console.log(key + "在句子中出现了" + strObj[key] + "次");
+        }
+
+        var flag = true;
+        var f = true && flag;
+        console.log(f);
+
+    </script>
+</head>
+<body>
+<div id="color"></div>
+</body>
+</html>
