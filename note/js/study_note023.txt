@@ -1,0 +1,25 @@
+1.数组
+    1.Array.isArray(obj)：判断一个对象是否是数组
+    2.Array.from()：将一个变量或对象组成一个新的数组
+    3.arr.concat(arr1,arr2,arr3...)：将两个或多个数组拼接成一个新的数组，原数组不改变
+    4.arr.every(function)：测试数组是否都通过了指定函数的测试，返回值是布尔类型，函数参数依次为每个元素的值、每个元素的下标、arr
+    5.arr.foreach(function)：遍历数组（通过了指定函数的测试），相当于for循环
+    6.arr.filter(function)：将通过指定函数测试的元素组成一个新的数组
+    7.arr.push(value)：将value追加到arr数组的最后，返回值为插入后arr的长度
+    8.arr.pop()：将arr数组的最后一个元素删掉，返回值为删除元素的值
+    9.arr.shift()：将arr数组的第一个元素删掉，返回值为删除元素的值
+    10.arr.unshift(value)：在arr数组的第一个元素前插入一个新的元素，返回值为插入后arr的长度
+    11.arr.indexOf(value)：返回指定元素值的下标
+    12.arr.join(value)：在arr数组的每个元素值之间插入指定value，返回是一个字符串
+    13.arr.map(function)：arr数组的每一个元素都要执行一次指定函数，返回是一个新的数组，比如function是Math.sqrt指所有元素都开方再返回
+    14.arr.reverse()：将arr数组的元素进行一次反转
+    15.arr.sort()：将arr数组的元素进行一次排序，并返回排序后的数组，排序规则是根据Unicode，但是排序不一定准确，比如100会比2小，详见MDN又解决方案
+    16.arr.slice(x,y)：从索引x截取到y-1，并返回一个截取后的新数组
+    17.arr.splice(x,y,value)：value可省略，意思在下标为x处删除y个元素，并新加一个value，返回一个新数组
+2.基本包装类型
+    1.普通变量不能直接调用属性或方法
+    2.对象可以直接调用属性或方法
+    3.基本包装类型
+        1.本身是基本类型，变量调用了属性或方法，那么这个变量就是基本包装类型对象
+        2.string、number、boolean
+    4.对象&&true结果为true；true&&对象结果为对象
