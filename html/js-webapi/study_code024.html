@@ -8,10 +8,19 @@
 <!--不推荐，不方便维护-->
 <input type="button" value="点击弹框" onclick="alert('hello world!')">
 <input type="button" value="点击弹框" id="btnAlert">
+<input type="button" value="点击切换图片" id="change_img">
+<img src="../../img/jsimgs/source_material_1.jpg" alt="" id="need_change_img">
 <script>
     document.getElementById("btnAlert").onclick = function () {
         alert("打工，那是不可能的")
     };
+
+    document.getElementById("change_img").onclick = function () {
+        document.getElementById("need_change_img").src = "../../img/jsimgs/source_material_2.jpg";
+    };
+
 </script>
+
+
 </body>
 </html>
