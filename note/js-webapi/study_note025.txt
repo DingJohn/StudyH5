@@ -1,1 +1,14 @@
 1.阻止a标签的跳转事件，可以直接在a标签的点击事件中加return false;
+2.获取元素的方式
+    1.根据id属性的值获取元素，返回来的是一个对象
+        1.document.getElementById("id属性的值")
+    2.根据标签名获取元素，返回的是一个伪数组，里面保存了多个DOM对象
+        1.document.getElementsByTagName(标签名")
+    3.根据name属性的值获取对象，返回的是一个伪数组，里面保存了多个DOM对象
+        1.document.getElementsByName("name属性的值")
+    4.根据类样式的名字来获取对象，返回的是一个伪数组，里面保存了多个DOM对象
+        1.document.getElementByClassName("类样式的值")
+    5.根据选择器获取元素，返回的是一个对象
+        1.document.querySelector("选择器的名字")
+    6.根据选择器获取元素，返回的是一个伪数组，里面保存了多个DOM对象
+        1.document.querySelectorAll("选择器的名字")
