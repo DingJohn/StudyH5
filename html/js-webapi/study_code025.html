@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的使用</title>
+</head>
+<body>
+<input type="button" value="点击换色" id="btn1">
+<ul id="car">
+    <li>红旗</li>
+    <li>五菱</li>
+    <li>比亚迪</li>
+    <li>长安</li>
+    <li>东风</li>
+    <li>哈弗</li>
+    <li>吉利</li>
+    <li>领克</li>
+</ul>
+
+<ul id="food">
+    <li>糖醋鱼</li>
+    <li>红烧鲫鱼</li>
+    <li>醋溜白菜</li>
+    <li>辣子鸡</li>
+    <li>麻辣小龙虾</li>
+    <li>宫保鸡丁</li>
+    <li>麻婆豆腐</li>
+    <li>酸辣大白菜</li>
+    <li>红烧茄子</li>
+</ul>
+
+<input type="button" value="点击更改value值" id="btn2">
+<br>
+<input type="text" value="空你急哇" name="name3"><br>
+<input type="text" value="空你急哇" name="name1"><br>
+<input type="text" value="空你急哇" name="name2"><br>
+<input type="text" value="空你急哇" name="name1"><br>
+<input type="text" value="空你急哇" name="name4"><br>
+<input type="text" value="空你急哇" name="name2"><br>
+<input type="text" value="空你急哇" name="name3"><br>
+
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+    //各行换色
+    my$("btn1").onclick = function () {
+        var liList = my$("car").getElementsByTagName("li");
+        for (var i = 0; i < liList.length; i++) {
+            liList[i].style.backgroundColor = i % 2 == 0 ? "red" : "pink";
+        }
+    };
+
+    var foodList = my$("food").getElementsByTagName("li");
+    for (var i = 0; i < foodList.length; i++) {
+        foodList[i].onmouseover = function () {
+            this.style.backgroundColor = "pink";
+        };
+        foodList[i].onmouseout = function () {
+            this.style.backgroundColor = "";
+        };
+    }
+
+    my$("btn2").onclick = function () {
+        var nameList = document.getElementsByName("name2");
+        for (var i = 0; i < nameList.length; i++) {
+            nameList[i].value = "哟西";
+        }
+    };
+</script>
+
+</body>
+</html>
