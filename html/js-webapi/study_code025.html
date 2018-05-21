@@ -39,6 +39,17 @@
 <input type="text" value="空你急哇" name="name2"><br>
 <input type="text" value="空你急哇" name="name3"><br>
 
+
+<ul id="ul2">
+    <li>小明的身高</li>
+    <li>小红的身高</li>
+    <li>小芳的身高</li>
+    <li>小菊的身高</li>
+    <li>小蔡的身高</li>
+    <li>小韩的身高</li>
+    <li>小虎的身高</li>
+</ul>
+
 <script src="../../js/js-webapi/common.js"></script>
 <script>
     //各行换色
@@ -65,6 +76,16 @@
             nameList[i].value = "哟西";
         }
     };
+
+    //自定义属性并获取自定义属性的值
+    var liList1 = my$("ul2").getElementsByTagName("li");
+    for (var i = 0; i < liList1.length; i++) {
+        liList1[i].setAttribute("weight", i * 2 + 100 + "cm");
+        liList1[i].onclick = function () {
+            alert(this.getAttribute("weight"));
+        };
+    }
+
 </script>
 
 </body>
