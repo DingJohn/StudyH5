@@ -12,3 +12,7 @@
         1.document.querySelector("选择器的名字")
     6.根据选择器获取元素，返回的是一个伪数组，里面保存了多个DOM对象
         1.document.querySelectorAll("选择器的名字")
+3.设置文本内容或HTML的代码，建议使用innerHTML
+4.自定义HTML属性
+    1.在HTML标签中添加的自定义属性，如果想要获取这个属性的值，需要使用getAttribute("自定义属性的名字")才能获取这个属性的值
+    2.在HTML标签中添加自定义属性并复制，需使用setAttribute(name,value)才能设置这个属性的值
