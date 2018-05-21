@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .dv table {
+            width: 400px;
+            margin: 100px auto;
+        }
+
+        .dv table thead {
+            background-color: #3D98FF;
+        }
+
+        .dv thead td {
+            border: 1px solid black;
+        }
+
+        .dv tbody td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div class="dv">
+    <table>
+        <thead>
+        <tr>
+            <td><input type="checkbox" id="ckAll"></td>
+            <td>菜名</td>
+            <td>饭店</td>
+        </tr>
+        </thead>
+        <tbody id="tb">
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>红烧豆腐</td>
+            <td>人民食堂</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>清蒸裸斑</td>
+            <td>鸡毛店</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>辣子鸡</td>
+            <td>人民食堂</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>黄辣丁</td>
+            <td>川菜馆</td>
+        </tr>
+        <tr>
+            <td><input type="checkbox"></td>
+            <td>肥肠血旺</td>
+            <td>白家饭店</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+
+    var ckAll = my$("ckAll");
+    var ck1 = my$("tb").getElementsByTagName("input");
+
+    ckAll.onclick = function () {
+        for (var i = 0; i < ck1.length; i++) {
+            ck1[i].checked = ckAll.checked;
+        }
+    };
+
+
+    for (var j = 0; j < ck1.length; j++) {
+        ck1[j].onclick = function () {
+            var flag = true;
+            for (var i = 0; i < ck1.length; i++) {
+                if (!ck1[i].checked) {
+                    flag = false;
+                    break;
+                }
+            }
+            ckAll.checked = flag;
+        };
+    }
+
+
+</script>
+</body>
+</html>
