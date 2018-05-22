@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定和解绑事件的兼容代码</title>
+</head>
+<body>
+<input type="button" id="btn1" value="点击"><input type="button" id="btn2" value="点击删除第一个事件">
+
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+
+    // 添加事件的兼容代码
+    function addEventListener(element, type, fn) {
+        if (element.addEventListener) {
+            element.addEventListener(type, fn, false);
+        } else if (element.attachEvent) {
+            element.attachEvent("on" + type, fn);
+        } else {
+            element["on" + type] = fn;
+        }
+    }
+
+    //解绑事件兼容代码
+    function removeEventListener(element, type, fnName) {
+        if (element.removeEventListener) {
+            element.removeEventListener(type, fnName, false);
+        } else if (element.deatchEvent) {
+            element.deatchEvent("on" + type, fnName);
+        } else {
+            element["on" + type] = null;
+        }
+    }
+
+    function f1() {
+        console.log("one");
+    }
+
+    function f2() {
+        console.log("two");
+    }
+
+
+    addEventListener(my$("btn1"), "click", f1);
+    addEventListener(my$("btn1"), "click", f2);
+
+    my$("btn2").onclick = function () {
+        removeEventListener(my$("btn1"), "click", f1);
+    }
+
+
+</script>
+</body>
+</html>
