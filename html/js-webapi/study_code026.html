@@ -61,6 +61,7 @@
         </tbody>
     </table>
 </div>
+<div id="dv2"></div>
 <script src="../../js/js-webapi/common.js"></script>
 <script>
 
@@ -87,6 +88,34 @@
         };
     }
 
+    var arr = [
+        {name: "百度", href: "https://www.baidu.com"},
+        {name: "google", href: "https://www.baidu.com"},
+        {name: "优酷", href: "https://www.baidu.com"},
+        {name: "爱奇艺", href: "https://www.baidu.com"},
+        {name: "腾讯", href: "https://www.baidu.com"},
+        {name: "阿里", href: "https://www.baidu.com"},
+        {name: "携程", href: "https://www.baidu.com"},
+        {name: "聚美", href: "https://www.baidu.com"},
+    ];
+
+    var dv2 = my$("dv2");
+    tableObj = document.createElement("table");
+    tableObj.border = "1";
+    tableObj.cellPadding = "0";
+    tableObj.cellSpacing = "0";
+    dv2.appendChild(tableObj);
+    for (var i = 0; i < arr.length; i++) {
+        dt = arr[i];
+        var trObjs = document.createElement("tr");
+        tableObj.appendChild(trObjs);
+        var td1 = document.createElement("td");
+        td1.innerText = dt.name;
+        trObjs.appendChild(td1);
+        var td2 = document.createElement("td");
+        td2.innerHTML = "<a href=" + dt.href + ">" + dt.name + "</a>"
+        trObjs.appendChild(td2);
+    }
 
 </script>
 </body>
