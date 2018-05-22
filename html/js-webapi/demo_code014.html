@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点名系统</title>
+    <style>
+        body {
+            background: url(../../img/jsimgs/441H.jpg) no-repeat;
+            background-size: 1366px 768px;
+        }
+
+        .fd {
+            position: relative;
+        }
+
+        #dv {
+            width: 918px;
+            margin: 100px 0 0 50px;
+        }
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #dv ul li {
+            display: block;
+            width: 100px;
+            height: 30px;
+            float: left;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 30px;
+            border-collapse: collapse;
+            margin-left: 2px;
+            margin-top: 2px;
+            background-color: rgba(255, 255, 255, .2);
+        }
+
+        .rd {
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-top: 50px;
+            margin-right: 50px;
+        }
+
+        .rd ul {
+            margin: 0 auto;
+            width: 120px;
+        }
+
+        .rd li {
+            height: 30px;
+            margin: 20px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            text-align: center;
+            line-height: 30px;
+            cursor: pointer;
+            color: rgba(255, 255, 255, .7);
+        }
+    </style>
+</head>
+<body>
+<div class="fd">
+    <div id="dv"></div>
+    <div class="rd">
+        <ul>
+            <li id="onePersonal">一人</li>
+            <li id="group">小组</li>
+            <li id="boys">男同学</li>
+            <li id="girls">女同学</li>
+            <li id="pause">暂停</li>
+        </ul>
+    </div>
+</div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+
+    var waterMarginHeroList = [
+        {name: "宋江", sex: "男"}, {name: "卢俊义", sex: "男"}, {name: "吴用", sex: "男"}, {name: "公孙胜", sex: "男"},
+        {name: "关胜", sex: "男"}, {name: "林冲", sex: "男"}, {name: "秦明", sex: "男"}, {name: "呼延灼", sex: "男"},
+        {name: "花荣", sex: "男"}, {name: "柴进", sex: "男"}, {name: "李应", sex: "男"}, {name: "朱仝", sex: "男"},
+        {name: "鲁智深", sex: "男"}, {name: "武松", sex: "男"}, {name: "董平", sex: "男"}, {name: "张清", sex: "男"},
+        {name: "杨志", sex: "男"}, {name: "徐宁", sex: "男"}, {name: "索超", sex: "男"}, {name: "戴宗", sex: "男"},
+        {name: "刘唐", sex: "男"}, {name: "李逵", sex: "男"}, {name: "史进", sex: "男"}, {name: "穆弘", sex: "男"},
+        {name: "雷横", sex: "男"}, {name: "李俊", sex: "男"}, {name: "阮小二", sex: "男"}, {name: "张横", sex: "男"},
+        {name: "阮小五", sex: "男"}, {name: "张顺", sex: "男"}, {name: "阮小七", sex: "男"}, {name: "杨雄", sex: "男"},
+        {name: "石秀", sex: "男"}, {name: "解珍", sex: "男"}, {name: "解宝", sex: "男"}, {name: "燕青", sex: "男"},
+        {name: "朱武", sex: "男"}, {name: "黄信", sex: "男"}, {name: "孙立", sex: "男"}, {name: "宣赞", sex: "男"},
+        {name: "郝思文", sex: "男"}, {name: "韩滔", sex: "男"}, {name: "彭玘", sex: "男"}, {name: "单廷珪", sex: "男"},
+        {name: "魏定国", sex: "男"}, {name: "萧让", sex: "男"}, {name: "裴宣", sex: "男"}, {name: "欧鹏", sex: "男"},
+        {name: "邓飞", sex: "男"}, {name: "燕顺", sex: "男"}, {name: "杨林", sex: "男"}, {name: "凌振", sex: "男"},
+        {name: "蒋敬", sex: "男"}, {name: "吕方", sex: "男"}, {name: "郭盛", sex: "男"}, {name: "安道全", sex: "男"},
+        {name: "皇甫端", sex: "男"}, {name: "王英", sex: "男"}, {name: "扈三娘", sex: "女"}, {name: "鲍旭", sex: "男"},
+        {name: "樊瑞", sex: "男"}, {name: "孔明", sex: "男"}, {name: "孔亮", sex: "男"}, {name: "项充", sex: "男"},
+        {name: "李衮", sex: "男"}, {name: "金大坚", sex: "男"}, {name: "马麟", sex: "男"}, {name: "童威", sex: "男"},
+        {name: "童猛", sex: "男"}, {name: "孟康", sex: "男"}, {name: "侯健", sex: "男"}, {name: "陈达", sex: "男"},
+        {name: "杨春", sex: "男"}, {name: "郑天寿", sex: "男"}, {name: "陶宗旺", sex: "男"}, {name: "宋清", sex: "男"},
+        {name: "乐和", sex: "男"}, {name: "龚旺", sex: "男"}, {name: "丁得孙", sex: "男"}, {name: "穆春", sex: "男"},
+        {name: "曹正", sex: "男"}, {name: "宋万", sex: "男"}, {name: "杜迁", sex: "男"}, {name: "薛永", sex: "男"},
+        {name: "施恩", sex: "男"}, {name: "李忠", sex: "男"}, {name: "周通", sex: "男"}, {name: "汤隆", sex: "男"},
+        {name: "杜兴", sex: "男"}, {name: "邹渊", sex: "男"}, {name: "邹润", sex: "男"}, {name: "朱贵", sex: "男"},
+        {name: "朱富", sex: "男"}, {name: "蔡福", sex: "男"}, {name: "蔡庆", sex: "男"}, {name: "李立", sex: "男"},
+        {name: "李云", sex: "男"}, {name: "焦挺", sex: "男"}, {name: "石勇", sex: "男"}, {name: "孙新", sex: "男"},
+        {name: "顾大嫂", sex: "女"}, {name: "张青", sex: "男"}, {name: "孙二娘", sex: "女"}, {name: "王定六", sex: "男"},
+        {name: "郁保四", sex: "男"}, {name: "白胜", sex: "男"}, {name: "时迁", sex: "男"}, {name: "段景住", sex: "男"}
+    ];
+
+    var waterMarginHero = my$("dv");
+    var onePersonal = my$("onePersonal");
+    var group = my$("group");
+    var boys = my$("boys");
+    var girls = my$("girls");
+    var pause = my$("pause");
+    var waterMarginHeroUl = document.createElement("ul");
+    waterMarginHero.appendChild(waterMarginHeroUl);
+
+    // 动态生成姓名
+    for (var i = 0; i < waterMarginHeroList.length; i++) {
+        var waterMarginHeroLi = document.createElement("li");
+        waterMarginHeroLi.innerText = waterMarginHeroList[i].name;
+        waterMarginHeroLi.setAttribute("sex", waterMarginHeroList[i].sex);
+        waterMarginHeroLi.setAttribute("index", i);
+        waterMarginHeroUl.appendChild(waterMarginHeroLi);
+    }
+
+    var waterMarginHeroLis = waterMarginHero.getElementsByTagName("li");
+
+    var timeId;
+
+    // 点击一人点名
+    onePersonal.onclick = function () {
+        timeId = setInterval(getRandom, 500, 1);
+    };
+
+    // 点击团队点名
+    group.onclick = function () {
+        timeId = setInterval(getRandom, 500, 4);
+    };
+
+    // 点击点名男孩
+    boys.onclick = function () {
+
+    };
+
+    // 点击点名女孩
+    girls.onclick = function () {
+
+    };
+
+    // 揭晓点名
+    pause.onclick = function () {
+        window.clearInterval(timeId);
+    };
+
+    //获取随机的座位号
+    function getRandom(num) {
+        var indexArr = [];
+        for (var i = 0; i < num; i++) {
+            var index = parseInt(Math.random() * 108);
+            while (index in indexArr) {
+                index = parseInt(Math.random() * 108);
+            }
+            indexArr[i] = index;
+        }
+        setSelect(num, indexArr);
+    }
+
+    //上一次被选中的
+    var lastSelectArr = [0, 0, 0, 0];
+
+    //设置被选中的
+    function setSelect(num, arr) {
+        var count = 0;
+        for (var i = 0; i < waterMarginHeroLis.length; i++) {
+            if (count < num) {
+                if (arr[0] == waterMarginHeroLis[i].getAttribute("index")) {
+                    waterMarginHeroLis[lastSelectArr[0]].style.backgroundColor = "";
+                    waterMarginHeroLis[i].style.backgroundColor = "red";
+                    lastSelectArr[0] = arr[0];
+                    count++;
+                }
+                if (num == 4) {
+                    if (arr[1] == waterMarginHeroLis[i].getAttribute("index")) {
+                        waterMarginHeroLis[lastSelectArr[1]].style.backgroundColor = "";
+                        waterMarginHeroLis[i].style.backgroundColor = "red";
+                        lastSelectArr[1] = arr[1];
+                        count++;
+                    }
+                    if (arr[2] == waterMarginHeroLis[i].getAttribute("index")) {
+                        waterMarginHeroLis[lastSelectArr[2]].style.backgroundColor = "";
+                        waterMarginHeroLis[i].style.backgroundColor = "red";
+                        lastSelectArr[2] = arr[2];
+                        count++;
+                    }
+                    if (arr[3] == waterMarginHeroLis[i].getAttribute("index")) {
+                        waterMarginHeroLis[lastSelectArr[3]].style.backgroundColor = "";
+                        waterMarginHeroLis[i].style.backgroundColor = "red";
+                        lastSelectArr[3] = arr[3];
+                        count++;
+                    }
+                }
+            } else {
+                break;
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
