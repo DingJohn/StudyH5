@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模仿百度搜索框</title>
+    <style>
+        #dv {
+            text-align: center;
+            margin: 200px auto;
+            
+        }
+
+        #search {
+            width: 350px;
+        }
+    </style>
+</head>
+<body>
+<div id="dv">
+    <input type="text" id="search"> <input type="button" value="搜索">
+</div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+    var searchArr = ["美国一家超市曾扬言台湾是国家", "7月1日起我国将降低汽车整车和零售件关税", "地铁站停车场超五成车是外地车",
+        "7月1日起购买90万元的进口车能省2.4万", "美国开始正式调查大选期间FBI是否监视特朗普", "地铁6号线延伸3站至津南",
+        "地铁细节藏城市文化密码", "美国务卿威胁对伊朗实施最严厉制裁", "美国波士顿大学授予张艺谋荣誉博士称谓", "美国对朝鲜会开战吗",
+        "美威胁加码对委封锁", "美媒称中美就中兴问题达成一致", "美的50年快闪店", "美图公布T9手机信息", "美图T9什么时候上市"];
+
+
+    my$("search").onkeyup = function () {
+        // 获取用户输入的要检索的文字
+        var searchValue = this.value;
+        // 新建数组，将以查询到的信息放在新数组中
+        var tempSearch = [];
+        // 将用户输入的文字与数组的信息进行匹配
+        for (var i = 0; i < searchArr.length; i++) {
+            if (searchArr[i].indexOf(searchValue) != -1) {
+                tempSearch.push(searchArr[i]);
+            }
+        }
+
+        if (searchValue.length == 0 || tempSearch.length == 0) {
+            if (my$("dv1")) {
+                document.removeChild(my$("dv1"));
+            }
+            return;
+        }
+
+        // 在输入框下描绘待选区
+        var waitDiv = document.createElement("div");
+        waitDiv.id = "dv1";
+        waitDiv.innerText = "哈哈哈";
+        waitDiv.style.width = "350px";
+        waitDiv.style.border = "1px solid red";
+        my$("dv").appendChild(waitDiv);
+    };
+
+</script>
+
+</body>
+</html>
