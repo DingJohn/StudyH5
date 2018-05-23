@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>模仿百度搜索框</title>
     <style>
+
         #dv {
-            text-align: center;
-            margin: 200px auto;
-            
+            width: 404px;
+            margin: 150px auto;
         }
 
         #search {
@@ -28,6 +28,11 @@
 
 
     my$("search").onkeyup = function () {
+
+        if (my$("dv1")) {
+            my$("dv").removeChild(my$("dv1"));
+        }
+
         // 获取用户输入的要检索的文字
         var searchValue = this.value;
         // 新建数组，将以查询到的信息放在新数组中
@@ -41,7 +46,7 @@
 
         if (searchValue.length == 0 || tempSearch.length == 0) {
             if (my$("dv1")) {
-                document.removeChild(my$("dv1"));
+                my$("dv").removeChild(my$("dv1"));
             }
             return;
         }
@@ -49,10 +54,32 @@
         // 在输入框下描绘待选区
         var waitDiv = document.createElement("div");
         waitDiv.id = "dv1";
-        waitDiv.innerText = "哈哈哈";
         waitDiv.style.width = "350px";
         waitDiv.style.border = "1px solid red";
         my$("dv").appendChild(waitDiv);
+
+        //将匹配内容放到待选区
+        for (var i = 0; i < tempSearch.length; i++) {
+            var pObj = document.createElement("p");
+            pObj.innerText = tempSearch[i];
+            pObj.style.margin = 0;
+            pObj.style.padding = 0;
+            pObj.style.paddingTop = "5px";
+            pObj.style.paddingBottom = "5px";
+            pObj.style.paddingLeft = "10px";
+            pObj.style.cursor = "pointer";
+            my$("dv1").appendChild(pObj);
+
+            //为p标签新增鼠标移动的事件
+            pObj.onmouseover = function () {
+                this.style.backgroundColor = "red";
+                this.style.color = "white";
+            };
+            pObj.onmouseout = function () {
+                this.style.backgroundColor = "";
+                this.style.color = "";
+            };
+        }
     };
 
 </script>
