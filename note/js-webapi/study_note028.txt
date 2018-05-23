@@ -1,0 +1,36 @@
+1.一次性定时器
+    1.setTimeout(fn,arg)
+        1.返回值是这个定时器的id
+        2.表示arg毫秒后执行fn函数(只执行一次)）
+    2.clearTimeout(arg)
+        1.arg指定时器id
+        2.彻底清除setTimeout导致的内存垃圾
+2.opacity
+    1.元素.style.opacity：渐变，值为0-1的小数
+3.如果样式的代码在style的标签中，外部普通的获取不到（可以使用offsetXXX来获取）；在style的属性中，外部可以获取
+4.offsetXXX系列
+    1.offsetWidth
+        1.获取元素的宽
+    2.offsetHeight
+        1.获取元素的高
+    3.offsetTop
+        1.获取元素距离上面的距离
+        2.没有脱离文档流
+            1.父级margin+父级padding+父级border+自己margin
+        3.脱离了文档流
+            1.受自己的margin和left影响
+    4.offsetLeft
+        1.获取元素距离左边的距离
+        2.没有脱离文档流
+            1.父级margin+父级padding+父级border+自己margin
+        3.脱离了文档流
+            1.受自己的margin和left影响
+5.document获取元素
+    1.document.body
+        1.获取body元素，得到的是标签
+    2.document.title
+        1.获取title标签中的值
+        2.document.title="XXX"
+            1.将title的值改为XXX
+    3.document.documentElement
+        1.获取html标签
