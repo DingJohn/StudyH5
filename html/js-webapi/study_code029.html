@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片跟随鼠标移动</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #img {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<img src="../../img/index_17.png" alt="" id="img">
+
+<script>
+    document.onmousemove = function (e) {
+        document.getElementById("img").style.left = e.pageX + "px";
+        document.getElementById("img").style.top = e.pageY + "px";
+    }
+</script>
+
+</body>
+</html>
