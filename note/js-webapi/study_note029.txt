@@ -1,0 +1,28 @@
+1.scroll系列
+    1.scrollWidth
+        1.元素中内容的实际宽度
+        2.如果没有内容就是元素的宽
+    2.scrollHeight
+        1.元素中内容的实际高度
+        2.如果没有内容就是元素的高
+    3.scrollTop
+        1.向上卷曲出去的距离
+    4.scrollLeft
+        2.向左卷曲出去的距离
+2.arr.push(arr.shift())
+    1.将第一个元素放到最后
+3.arr.unshift(arr.pop())
+    1.将最后一个元素放到最前
+4.client系列
+    1.clientLeft
+        1.获取用户可见区域距离左边框的宽度
+    2.clientTop
+        1.获取用户可见区域距离上边框的宽度
+    3.clientWidth
+        1.用户可见区域宽度
+        2.不包括border和margin，包含padding
+    4.clientHeight
+        1.用户可见区域高度
+        2.不包括border和margin，包含padding
+5.pageX：获取当前距离页面顶部的距离（包括看不到的）
+6.pageY：获取当前距离页面左边的距离（包括看不到的）
