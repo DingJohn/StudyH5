@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #clock {
+            width: 634px;
+            height: 424px;
+            margin: 100px auto;
+            border: 1px solid rgba(0, 0, 0, .3);
+        }
+
+        #clock img {
+            padding: 2px;
+        }
+    </style>
+</head>
+<body>
+<div id="clock">
+    <img src="../../img/meimei/00_00.jpg">
+</div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+    setClock();
+    setInterval(function () {
+        setClock();
+    }, 1000);
+
+    function setClock() {
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        hours = hours < 10 ? "0" + hours : hours;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        var imgObj = my$("clock").getElementsByTagName("img")[0];
+        imgObj.src = "../../img/meimei/" + hours + "_" + minutes + ".jpg";
+    }
+
+    document.title = "美女时钟";
+
+</script>
+</body>
+</html>
