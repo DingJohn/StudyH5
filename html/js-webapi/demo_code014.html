@@ -80,6 +80,7 @@
 <script src="../../js/js-webapi/common.js"></script>
 <script>
 
+    //名单信息
     var waterMarginHeroList = [
         {name: "宋江", sex: "男"}, {name: "卢俊义", sex: "男"}, {name: "吴用", sex: "男"}, {name: "公孙胜", sex: "男"},
         {name: "关胜", sex: "男"}, {name: "林冲", sex: "男"}, {name: "秦明", sex: "男"}, {name: "呼延灼", sex: "男"},
@@ -131,76 +132,107 @@
     var waterMarginHeroLis = waterMarginHero.getElementsByTagName("li");
 
     var timeId;
+    // 存放根据性别区分的同学
+    var sexSelect = [];
 
     // 点击一人点名
     onePersonal.onclick = function () {
-        timeId = setInterval(getRandom, 500, 1);
+        startCallName(1, 100);
+        sexSelect.length = 0;
     };
 
     // 点击团队点名
     group.onclick = function () {
-        timeId = setInterval(getRandom, 500, 4);
+        startCallName(4, 100);
+        sexSelect.length = 0;
     };
 
     // 点击点名男孩
     boys.onclick = function () {
-
+        getSexSelect("男");
+        startCallName(1, 100);
     };
 
     // 点击点名女孩
     girls.onclick = function () {
-
+        getSexSelect("女");
+        // 因为女孩儿比较少，所以执行速度要更快一些
+        startCallName(1, 50);
     };
 
-    // 揭晓点名
+    /**
+     *
+     * 开始定时执行点名任务
+     * @param num 一次点名人数
+     * @param time 任务间隔时间
+     */
+    function startCallName(num, time) {
+        getRandom(num);
+        if (timeId) {
+            window.clearInterval(timeId);
+        }
+        timeId = setInterval(getRandom, time, num);
+    }
+
+    /**
+     * 揭晓点名
+     */
     pause.onclick = function () {
         window.clearInterval(timeId);
     };
 
-    //获取随机的座位号
+    /**
+     * 创建男女同学数组
+     * @param sex 性别
+     */
+    function getSexSelect(sex) {
+        sexSelect.length = 0;
+        for (var i = 0; i < waterMarginHeroLis.length; i++) {
+            if (waterMarginHeroLis[i].getAttribute("sex") == sex) {
+                sexSelect.push(waterMarginHeroLis[i].getAttribute("index"));
+            }
+        }
+    }
+
+    /**
+     * 获取随机座位号
+     * @param num 一次获取座位号个数
+     */
     function getRandom(num) {
         var indexArr = [];
         for (var i = 0; i < num; i++) {
             var index = parseInt(Math.random() * 108);
-            while (index in indexArr) {
+            if (sexSelect.length != 0) {
+                do {
+                    index = parseInt(Math.random() * 108);
+                } while (!sexSelect.includes(index.toString()));
+            }
+            while (indexArr.includes(index)) {
                 index = parseInt(Math.random() * 108);
             }
-            indexArr[i] = index;
+            indexArr.push(index);
         }
         setSelect(num, indexArr);
     }
 
     //上一次被选中的
-    var lastSelectArr = [0, 0, 0, 0];
+    var lastSelectArr = [];
 
-    //设置被选中的
+    /**
+     * 设置被选中的座位
+     * @param num 一次点名的人数
+     * @param arr 被选中座位的数组
+     */
     function setSelect(num, arr) {
+        clearLastSelect();
         var count = 0;
         for (var i = 0; i < waterMarginHeroLis.length; i++) {
             if (count < num) {
-                if (arr[0] == waterMarginHeroLis[i].getAttribute("index")) {
-                    waterMarginHeroLis[lastSelectArr[0]].style.backgroundColor = "";
-                    waterMarginHeroLis[i].style.backgroundColor = "red";
-                    lastSelectArr[0] = arr[0];
-                    count++;
-                }
-                if (num == 4) {
-                    if (arr[1] == waterMarginHeroLis[i].getAttribute("index")) {
-                        waterMarginHeroLis[lastSelectArr[1]].style.backgroundColor = "";
+                for (var j = 0; j < arr.length; j++) {
+                    if (arr[j] == waterMarginHeroLis[i].getAttribute("index")) {
                         waterMarginHeroLis[i].style.backgroundColor = "red";
-                        lastSelectArr[1] = arr[1];
-                        count++;
-                    }
-                    if (arr[2] == waterMarginHeroLis[i].getAttribute("index")) {
-                        waterMarginHeroLis[lastSelectArr[2]].style.backgroundColor = "";
-                        waterMarginHeroLis[i].style.backgroundColor = "red";
-                        lastSelectArr[2] = arr[2];
-                        count++;
-                    }
-                    if (arr[3] == waterMarginHeroLis[i].getAttribute("index")) {
-                        waterMarginHeroLis[lastSelectArr[3]].style.backgroundColor = "";
-                        waterMarginHeroLis[i].style.backgroundColor = "red";
-                        lastSelectArr[3] = arr[3];
+                        waterMarginHeroLis[i].style.color = "white";
+                        lastSelectArr.push(arr[j]);
                         count++;
                     }
                 }
@@ -208,6 +240,17 @@
                 break;
             }
         }
+
+        /**
+         * 清除上一次被选中的
+         */
+        function clearLastSelect() {
+            for (var i = 0; i < lastSelectArr.length; i++) {
+                waterMarginHeroLis[lastSelectArr[i]].style.backgroundColor = "";
+                waterMarginHeroLis[lastSelectArr[i]].style.color = "";
+            }
+        }
+
     }
 
 </script>
