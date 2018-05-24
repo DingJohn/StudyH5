@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇食物模型</title>
+    <style>
+        #map {
+            width: 800px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+    // 找到map
+    var map = my$("map");
+
+    // 随机数对象
+    (function (win) {
+        function Random() {
+
+        }
+
+        Random.prototype.getRandom = function (min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        };
+        win.Random = new Random();
+    })(Window);
+
+    //食物对象
+    (function () {
+        function Food(width, height, color) {
+            this.width = width || 20;
+            this.height = height || 20;
+            this.color = color || "red";
+            // 小方块的横纵坐标
+            this.x = 0;
+            this.y = 0;
+            this.element = document.createElement("div");
+        }
+
+        Food.prototype.init = function (map) {
+            this.element.style.position = "absolute";
+            this.element.style.width = this.width + "px";
+            this.element.style.height = this.height + "px";
+            this.element.style.backgroundColor = this.color;
+            map.appendChild(this.element);
+            this.foodPoint(map);
+        };
+
+        Food.prototype.foodPoint = function (map) {
+            this.x = Window.Random.getRandom(0, map.offsetWidth / this.width) * this.width;
+            this.y = Window.Random.getRandom(0, map.offsetHeight / this.height) * this.height;
+            this.element.style.top = this.y + "px";
+            this.element.style.left = this.x + "px";
+        };
+
+        var food = new Food(20, 20, "red");
+        food.init(map);
+
+    })();
+
+</script>
+</body>
+</html>

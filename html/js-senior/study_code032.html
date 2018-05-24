@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>贪吃蛇游戏</title>
+    <style>
+
+        /*地图的style样式*/
+        #map {
+            width: 900px;
+            height: 600px;
+            background-color: #ccc;
+            position: relative;
+        }
+
+    </style>
+</head>
+<body>
+<!--贪吃蛇地图-->
+<div id="map"></div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+
+    // 食物对象
+    (function () {
+
+        // 保存食物
+        let foodList = [];
+
+        /**
+         * 创建食物的构造函数
+         * @param x 食物的横坐标
+         * @param y 食物的纵坐标
+         * @param width 食物的宽
+         * @param height 食物的高
+         * @param color 食物的颜色
+         * @constructor 食物的构造函数
+         */
+        function Food(x, y, width, height, color) {
+            this.x = x || 0;
+            this.y = y || 0;
+            this.width = width || 20;
+            this.height = height || 20;
+            this.color = color || "pink";
+        }
+
+        /**
+         * 初始化食物
+         * @param map 地图
+         */
+        Food.prototype.init = function (map) {
+            //每次初始化先删除食物
+            removeFood();
+
+            // 创建食物div
+            let foodDiv = document.createElement("div");
+            foodDiv.style.position = "absolute";
+
+            // 获取食物的坐标
+            this.x = parseInt(Math.random() * (map.offsetHeight / this.height)) * this.height;
+            console.log(this.x);
+            foodDiv.style.top = this.x + "px";
+            this.y = parseInt(Math.random() * (map.offsetWidth / this.width)) * this.width;
+            foodDiv.style.left = this.y + "px";
+            foodDiv.style.width = this.width + "px";
+            foodDiv.style.height = this.height + "px";
+            foodDiv.style.backgroundColor = this.color;
+            foodDiv.style.borderRadius = this.width / 2 + "px";
+
+            // 将食物放到map中
+            map.appendChild(foodDiv);
+
+            foodList.push(foodDiv);
+        };
+
+        /**
+         * 删除食物
+         */
+        function removeFood() {
+            for (let i = 0; i < foodList.length; i++) {
+                //获取食物
+                let food = foodList[i];
+                //删除食物的div
+                food.parentNode.removeChild(food);
+                //将食物从数组中删掉
+                foodList.splice(i, 1)
+            }
+        }
+
+        //将食物对象暴露给外部可用，必须小写，大写会报错
+        window.Food = Food;
+    }());
+
+    // 蛇的对象
+    (function () {
+
+        //存放蛇的每个身体部分
+        let snakeList = [];
+
+        /**
+         * 蛇的构造函数
+         * @param width 蛇的宽
+         * @param height 蛇的高
+         * @param direction 蛇的运动方向
+         * @constructor 蛇
+         */
+        function Snake(width, height, direction) {
+            this.width = width || 20;
+            this.height = height || 20;
+            this.direction = direction || "right";
+
+            //初始化蛇的身体
+            this.body = [
+                {x: 2, y: 0, color: "red"},
+                {x: 1, y: 0, color: "pink"},
+                {x: 0, y: 0, color: "pink"}
+            ];
+        }
+
+        /**
+         * 初始化蛇
+         * @param map 地图
+         */
+        Snake.prototype.init = function (map) {
+            removeSnake();
+
+            //添加蛇的身体部分
+            for (let i = 0; i < this.body.length; i++) {
+                let snake = this.body[i];
+
+                //创建蛇的div
+                let snakeDiv = document.createElement("div");
+                snakeDiv.style.position = "absolute";
+
+                //初始化蛇的样式
+                snakeDiv.style.width = this.width + "px";
+                snakeDiv.style.height = this.height + "px";
+                snakeDiv.style.backgroundColor = snake.color;
+                snakeDiv.style.top = snake.y * this.height + "px";
+                snakeDiv.style.left = snake.x * this.width + "px";
+
+                if (i === 0) {
+                    snakeDiv.style.borderRadius = this.width / 2 + "px";
+                }
+
+                // 将蛇放入地图
+                map.appendChild(snakeDiv);
+
+                snakeList.push(snakeDiv);
+            }
+        };
+
+
+        /**
+         * 蛇移动的方法
+         * @param food 食物
+         * @param map 地图
+         */
+        Snake.prototype.move = function (food, map) {
+
+            //取出没一个蛇的部位
+            for (let i = this.body.length - 1; i >= 1; i--) {
+                this.body[i].x = this.body[i - 1].x;
+                this.body[i].y = this.body[i - 1].y;
+            }
+
+            //判断蛇的运动方向
+            switch (this.direction) {
+                case "left":
+                    this.body[0].x -= 1;
+                    break;
+                case "top":
+                    this.body[0].y -= 1;
+                    break;
+                case "right":
+                    this.body[0].x += 1;
+                    break;
+                case "bottom":
+                    this.body[0].y += 1;
+                    break;
+                default:
+                    break;
+            }
+
+            // 获取蛇的头部坐标
+            let snakeX = this.body[0].x * this.width;
+            let snakeY = this.body[0].y * this.height;
+            //判断蛇是否吃到食物
+            if (snakeX === food.y && snakeY === food.x) {
+                // 获取到蛇的最后一截并追加到蛇身体的最后
+                let last = this.body[this.body.length - 1];
+                this.body.push({
+                    x: last.x,
+                    y: last.y,
+                    color: last.color
+                });
+
+                // 吃到了食物需要删除食物并重新添加食物
+                food.init(map);
+
+            }
+
+        };
+
+        /**
+         * 当蛇移动之后要删掉之前的蛇
+         */
+        function removeSnake() {
+            for (let i = snakeList.length - 1; i >= 0; i--) {
+                let snake = snakeList[i];
+                //主要是因为要删除div，所以才需要循环
+                snake.parentNode.removeChild(snake);
+                snakeList.splice(i, 1);
+            }
+        }
+
+        window.Snake = Snake;
+
+    }());
+
+    // 游戏对象
+    (function () {
+
+        //承接this
+        let that;
+
+        /**
+         * 游戏的构造方法
+         * @param map 地图
+         * @constructor 构造函数
+         */
+        function Game(map) {
+            this.food = new Food();
+            this.snake = new Snake();
+            this.map = map;
+            that = this;
+        }
+
+        /**
+         * 游戏的初始化
+         */
+        Game.prototype.init = function () {
+            this.food.init(this.map);
+            this.snake.init(this.map);
+            runSnake(this.food, this.map);
+            getKeyType();
+        };
+
+        /**
+         * 让蛇跑的方法
+         * @param food 食物
+         * @param map 地图
+         */
+        function runSnake(food, map) {
+            let timeId = setInterval(function () {
+                this.snake.move(food, map);
+                this.snake.init(map);
+                //可移动的最大横坐标
+                let maxX = map.offsetWidth / this.snake.width;
+                //可移动的最大纵坐标
+                let maxY = map.offsetHeight / this.snake.height;
+                //蛇头部的当前横坐标
+                let snakeX = this.snake.body[0].x;
+                //蛇头部的当前纵坐标
+                let snakeY = this.snake.body[0].y;
+                if (snakeX < 0 || snakeX >= maxX
+                    || snakeY < 0 || snakeY >= maxY) {
+                    alert("Game over!");
+                    clearInterval(timeId);
+                }
+            }.bind(that), 150);
+        }
+
+        /**
+         * 获取用户按键的状态
+         */
+        function getKeyType() {
+            document.addEventListener("keydown", function (event) {
+                switch (event.keyCode) {
+                    case 37:
+                        this.snake.direction = "left";
+                        break;
+                    case 38:
+                        this.snake.direction = "top";
+                        break;
+                    case 39:
+                        this.snake.direction = "right";
+                        break;
+                    case 40:
+                        this.snake.direction = "bottom";
+                        break;
+                    default:
+                        break;
+                }
+            }.bind(that), false);
+        }
+
+        window.Game = Game;
+
+    }());
+
+    let game = new Game(my$("map"));
+    game.init();
+
+</script>
+</body>
+</html>
