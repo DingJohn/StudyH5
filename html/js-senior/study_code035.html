@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style type="text/css">
+        body {
+            background: #ccc;
+        }
+
+        label {
+            width: 40px;
+            display: inline-block;
+        }
+
+        span {
+            color: red;
+        }
+
+        .container {
+            margin: 100px auto;
+            width: 400px;
+            padding: 50px;
+            line-height: 40px;
+            border: 1px solid #999;
+            background: #efefef;
+        }
+
+        span {
+            margin-left: 30px;
+            font-size: 12px;
+        }
+
+        .wrong {
+            color: red
+        }
+
+        .right {
+            color: green;
+        }
+
+        .defau {
+            width: 200px;
+            height: 20px;
+        }
+
+        .de1 {
+            background-position: 0 -20px;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="container" id="dv">
+    <label for="qq">Q Q</label><input type="text" id="qq"><span></span><br/>
+    <label>手机</label><input type="text" id="phone"><span></span><br/>
+    <label>邮箱</label><input type="text" id="e-mail"><span></span><br/>
+    <label>座机</label><input type="text" id="telephone"><span></span><br/>
+    <label>姓名</label><input type="text" id="fullName"><span></span><br/>
+</div>
+<script src="../../js/js-webapi/common.js"></script>
+<script>
+
+    // 校验注册格式
+    f1(my$("qq"), /\d{5,10}/);
+    f1(my$("phone"), /^13(\d{9})$|^15(\d{9})$/);
+    f1(my$("e-mail"), /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g);
+    f1(my$("telephone"), /^((0\d{2,3}-\d{7,8})|(1[3584]\d{9}))$/);
+    f1(my$("fullName"), /[\u4e00-\u9fa5]{2,6}/);
+
+    function f1(element, rex) {
+        element.onblur = function () {
+            if (rex.test(this.value)) {
+                this.nextElementSibling.innerHTML = "验证通过！";
+                this.nextElementSibling.style.color = "green";
+            } else {
+                this.nextElementSibling.innerHTML = "太简单了！";
+                this.nextElementSibling.style.color = "red";
+            }
+        };
+    }
+
+    // 遍历DOM树
+
+    //获取根节点
+    let root = document.documentElement;
+
+    function getElement(root) {
+        let rootChild = root.children;
+        for (let i = 0; i < rootChild.length; i++) {
+            let child = rootChild[i];
+            printElement(child);
+            child.children && getElement(child);
+        }
+    }
+
+    function printElement(root) {
+        console.log(root.nodeName);
+    }
+
+    getElement(root);
+
+</script>
+</body>
+</html>
