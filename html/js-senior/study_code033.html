@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承(组合继承)</title>
+</head>
+<body>
+<script>
+
+    function F1(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+        this.eat = function () {
+            console.log("吃了吗？");
+        };
+    }
+
+    F1.prototype.play = function () {
+        console.log("我要玩");
+    };
+
+    function F2(name, age, sex, score) {
+        F1.call(this, name, age, sex);
+        this.score = score;
+    }
+
+    F2.prototype = new F1();
+
+    let f2 = new F2("小红", 12, "女", 78);
+    console.log(f2.name, f2.age, f2.score);
+    f2.eat();
+    let f3 = new F2("小黄", 12, "男", 98);
+    console.log(f3.name, f3.age, f3.score);
+    f3.play();
+    let f4 = new F2("小美", 12, "女", 8);
+    console.log(f4.name, f4.age, f4.score);
+
+</script>
+</body>
+</html>
