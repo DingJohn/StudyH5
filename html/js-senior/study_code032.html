@@ -67,6 +67,11 @@
             foodDiv.style.backgroundColor = this.color;
             foodDiv.style.borderRadius = this.width / 2 + "px";
 
+            foodDiv.innerText = "P";
+            foodDiv.style.lineHeight = this.height + "px";
+            foodDiv.style.textAlign = "center";
+            foodDiv.style.color = "white";
+
             // 将食物放到map中
             map.appendChild(foodDiv);
 
@@ -139,8 +144,14 @@
                 snakeDiv.style.top = snake.y * this.height + "px";
                 snakeDiv.style.left = snake.x * this.width + "px";
 
+                snakeDiv.style.borderRadius = this.width / 3 * 2 + "px";
+
                 if (i === 0) {
                     snakeDiv.style.borderRadius = this.width / 2 + "px";
+                    snakeDiv.innerText = "C";
+                    snakeDiv.style.textAlign = "center";
+                    snakeDiv.style.color = "white";
+                    snakeDiv.style.lineHeight = this.height + "px";
                 }
 
                 // 将蛇放入地图
@@ -265,7 +276,7 @@
                 let snakeY = this.snake.body[0].y;
                 if (snakeX < 0 || snakeX >= maxX
                     || snakeY < 0 || snakeY >= maxY) {
-                    alert("Game over!");
+                    alert("Game over! Score: " + this.snake.body.length);
                     clearInterval(timeId);
                 }
             }.bind(that), 150);
