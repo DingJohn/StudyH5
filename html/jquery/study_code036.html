@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初识jQuery</title>
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+
+        // 点击新增模块并添加颜色
+        $(function () {
+            $("#btn1").click(function () {
+                $(".dv1").css({
+                    "width": "400px",
+                    "height": "300px",
+                    "background-color": "red"
+                });
+            });
+        });
+
+
+        // 点击隔行变色
+        $(function () {
+            $("#btn2").click(function () {
+                $(".uu li:even").css("background-color", "red");
+                $(".uu li:odd").css("background-color", "green");
+            });
+        });
+
+
+    </script>
+</head>
+<body>
+<!--新增模块并添加颜色-->
+<input type="button" value="新增模块" id="btn1">
+<div class="dv1"></div>
+
+<!--点击隔行变色-->
+<input type="button" value="各行变色" id="btn2">
+<ul class="uu">
+    <li>少林派</li>
+    <li>武当派</li>
+    <li>崆峒派</li>
+    <li>峨眉派</li>
+    <li>逍遥派</li>
+    <li>古墓派</li>
+    <li>灵鹫宫</li>
+    <li>华山派</li>
+    <li>青城派</li>
+    <li>嵩山派</li>
+    <li>恒山派</li>
+</ul>
+
+</body>
+</html>

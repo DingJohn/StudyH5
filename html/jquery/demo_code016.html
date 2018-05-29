@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点击开关灯</title>
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                if ($(this).val() === "关灯") {
+                    $("body").css("background-color", "rgba(0,0,0,.7)");
+                    $(this).val("开灯");
+                } else {
+                    $("body").css("background-color", "white");
+                    $(this).val("关灯");
+                }
+            })
+            ;
+        });
+    </script>
+</head>
+<body>
+<input type="button" value="关灯" id="btn1">
+</body>
+</html>
