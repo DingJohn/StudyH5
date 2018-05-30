@@ -2,9 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>新增表格</title>
+    <style>
+        .dv1 {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #44C522;
+            margin-top: 20px;
+        }
+    </style>
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+
+        let arr = [{"name": "百度", "href": "https://www.baidu.com"},
+            {"name": "优酷", "href": "https://www.youku.com"},
+            {"name": "A站", "href": "https:www.acfun.com"},
+            {"name": "新浪", "href": "https://www.sina.com"},
+            {"name": "新浪邮箱", "href:": "https://mail.sina.com"},
+            {"name": "土豆", "href": "https://www.tudou.com"},
+            {"name": "考研网", "href": "https://www.kaoyan.com"},
+            {"name": "电子科技大学", "href": "http://www.uestc.edu.cn"}];
+
+        $(function () {
+            $("#btn1").click(function () {
+                let tabObj = $("<table border='1' cellpadding='0' cellspacing='0'></table>");
+                $(".dv1").append(tabObj);
+                for (let i = 0; i < arr.length; i++) {
+                    let trObj = $("<tr></tr>");
+                    tabObj.append(trObj);
+                    let td1 = $("<td>" + arr[i].name + "</td>")
+                    trObj.append(td1);
+                    let td2 = $("<td><a href='" + arr[i].href + "'>" + arr[i].name + "</a></td>");
+                    trObj.append(td2);
+
+                    trObj.mouseenter(function () {
+                        $(this).css("background-color", "pink");
+                    }).mouseleave(function () {
+                        $(this).css("background-color", "");
+                    });
+                }
+
+            });
+        });
+
+        $(function () {
+            $("#btn2").click(function () {
+                $(".dv1").empty();
+            });
+        });
+
+        $(function () {
+            $("#btn3").click(function () {
+                $(".dv1").children('table').prepend("<tr><td>淘宝</td><td><a href='http://www.taobao.com'>淘宝</a></td></tr>");
+            });
+        });
+
+    </script>
 </head>
 <body>
-$END$
+<input type="button" value="点击新增表格" id="btn1">
+<input type="button" value="点击移除表格" id="btn2">
+<input type="button" value="点击新增一行" id="btn3">
+<div class="dv1"></div>
 </body>
 </html>
