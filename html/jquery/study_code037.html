@@ -2,9 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>开关灯升级版</title>
+
+    <style>
+        .cls {
+            background-color: rgba(0, 0, 0, .7);
+        }
+    </style>
+
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                // 判断元素是否有cls类样式，如果有则删除，如没有则添加，此处类样式可不写“.”
+                $("body").toggleClass("cls");
+            });
+        });
+    </script>
+
 </head>
 <body>
-$END$
+<input type="button" value="开/关灯" id="btn">
 </body>
 </html>
