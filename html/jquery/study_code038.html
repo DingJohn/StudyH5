@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Title</title>
+    <style>
+        .dv1 {
+            width: 200px;
+            height: 200px;
+            background-color: bisque;
+            border: 1px #44C522 solid;
+        }
+    </style>
+
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+
+    <script>
+
+        // 此方式不会覆盖原值，会出现多次
+        // $(function () {
+        //     $("#btn1").click(function () {
+        //         ($("<input type='button' value='button'>")).appendTo($(".dv1"));
+        //     });
+        // });
+
+
+        // 此方式会覆盖原值,只出现一次
+        $(function () {
+            $("#btn1").click(function () {
+                $(".dv1").html("<input type='button' value='button'>");
+            });
+        });
+
+
+    </script>
+
+
 </head>
 <body>
-$END$
+
+<input type="button" value="新增按钮" id="btn1">
+<div class="dv1">这个值会被覆盖的</div>
+
 </body>
 </html>
