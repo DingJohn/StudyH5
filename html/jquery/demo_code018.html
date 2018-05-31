@@ -2,9 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>选择</title>
+    <style>
+        table {
+            width: 400px;
+            height: 250px;
+            text-align: center;
+        }
+
+        thead {
+            background-color: #4C72A8;
+            color: white;
+        }
+
+        thead tr {
+            height: 40px;
+        }
+    </style>
+
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+
+        $(function () {
+            $("#all_check").click(function () {
+                $("tbody").find("input").prop("checked", $(this).prop("checked"));
+            });
+        });
+
+        $(function () {
+            $("tbody input").click(function () {
+                //获取总行数
+                let trLength = $("tbody tr").length;
+                // 获取选中的行数
+                let selectLength = $("tbody input:checked").length;
+                $("#all_check").prop("checked", trLength == selectLength ? true : false);
+            });
+        });
+
+
+    </script>
+
 </head>
 <body>
-$END$
+<table border="1" cellspacing="0" cellpadding="0">
+    <thead>
+    <tr>
+        <td>
+            <input type="checkbox" id="all_check">
+        </td>
+        <td>导演</td>
+        <td>电影</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>张艺谋</td>
+        <td>天下无贼</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>陈思成</td>
+        <td>唐人街神探</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>吴京</td>
+        <td>战狼</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>林超贤</td>
+        <td>红海行动</td>
+    </tr>
+    <tr>
+        <td>
+            <input type="checkbox">
+        </td>
+        <td>钢铁侠</td>
+        <td>乔恩·费儒</td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
