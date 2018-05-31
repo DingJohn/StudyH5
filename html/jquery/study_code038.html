@@ -10,6 +10,17 @@
             background-color: bisque;
             border: 1px #44C522 solid;
         }
+
+        #dv2 {
+            width: 300px;
+            height: 40px;
+            border: 1px solid #44C522;
+        }
+
+        #dv2 p {
+            padding: 10px;
+            border: 1px solid #3D98FF;
+        }
     </style>
 
     <script src="../../js/jquery/jquery-1.12.4.js"></script>
@@ -32,6 +43,50 @@
         });
 
 
+        //为元素绑定多个相同事件(click方法)
+        $(function () {
+            $("#btn2").click(function () {
+                console.log("click function 1");
+            });
+
+            $("#btn2").click(function () {
+                console.log("click function 2");
+            });
+
+        });
+
+        // bind方法
+        $(function () {
+            $("#btn3").bind("click", function () {
+                console.log("bind function 1");
+            }).bind("click", function () {
+                console.log("bind function 2");
+            });
+        });
+
+
+        //bind方法链式
+        $(function () {
+            $("#btn31").bind({
+                "click": function () {
+                    console.log("bind function 31");
+                }, "click": function () {
+                    console.log("bind function 32");
+                }
+            });
+        });
+
+
+        // delegate方法
+        $(function () {
+            $("#btn4").click(function () {
+                $("#dv2").delegate("p", "click", function () {
+                    console.log("p click");
+                });
+            });
+        });
+
+
     </script>
 
 
@@ -40,6 +95,15 @@
 
 <input type="button" value="新增按钮" id="btn1">
 <div class="dv1">这个值会被覆盖的</div>
+
+<input type="button" value="为元素绑定多个相同事件（click方法）" id="btn2">
+<input type="button" value="为元素绑定多个相同事件（bind方法）" id="btn3">
+<input type="button" value="为元素绑定多个相同事件（bind方法,链式）" id="btn31">
+<input type="button" value="通过父元素代理为子元素添加事件(delegate方法）" id="btn4">
+
+<div id="dv2">
+    <p>这是一句话</p>
+</div>
 
 </body>
 </html>
