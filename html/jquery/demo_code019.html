@@ -2,9 +2,189 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>模拟表格的添加与删除</title>
+    <style>
+
+        html, body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+        }
+
+        .warp {
+            width: 350px;
+            margin: 0 auto;
+            padding-top: 150px;
+        }
+
+        .tab {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+        }
+
+        table thead {
+            background-color: #CDAF95;
+            color: white;
+        }
+
+        table td {
+            height: 30px;
+        }
+
+        #mask {
+            width: 100%;
+            height: 100%;
+            background-color: #ADADAE;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: none;
+        }
+
+        #new_window {
+            width: 380px;
+            height: 300px;
+            border: 1px solid #44C522;
+            position: absolute;
+            left: 490px;
+            top: 100px;
+            background-color: #fff;
+            display: none;
+        }
+
+        .new_win_title {
+            background-color: #C4C4C4;
+            padding: 10px;
+        }
+
+        #new_cancle {
+            float: right;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
+        }
+
+        .new_win_content {
+            height: 140px;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .new_content_submit {
+            text-align: center;
+        }
+
+    </style>
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            //点击新增显示
+            $("#new_object").click(function () {
+                $("#new_window").show();
+                $("#mask").show();
+            });
+
+            //点击取消隐藏
+            $("#new_cancle").click(function () {
+                $("#new_window").hide();
+                $("#mask").hide();
+                $("#new_subject").val("");
+                $("#new_shcool").val("");
+            });
+
+            //点击提交隐藏
+            $("#new_commit").click(function () {
+                let new_subject = $("#new_subject");
+                let new_school = $("#new_shcool");
+
+                $("<tr><td>" + new_subject.val() + "</td><td>" + new_school.val() + "</td><td>" +
+                    "<a href='javascript:;' class='get'>get</a></td></tr>>").appendTo(".tab tbody");
+
+                new_school.val("");
+                new_subject.val("");
+
+                $("#new_window").hide();
+                $("#mask").hide();
+            });
+
+            //点击get删除
+            $("tbody").delegate(".get", "click", function () {
+                $(this).parent().parent().remove();
+            });
+
+            //鼠标进入离开样式
+            $("tbody tr").mouseenter(function () {
+                $(this).css("background", "#ccc");
+            }).mouseleave(function () {
+                $(this).css("background", "");
+            });
+        });
+    </script>
 </head>
 <body>
-$END$
+<div class="warp">
+    <div id="btn">
+        <input type="button" value="新增科目" id="new_object">
+    </div>
+    <div class="tab">
+        <table border="1" cellpadding="0" cellspacing="0">
+            <thead>
+            <tr>
+                <td>课程名</td>
+                <td>学院</td>
+                <td>是否毕业</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>html</td>
+                <td>成都学院</td>
+                <td><a href="javascript:;" class="get">get</a></td>
+            </tr>
+            <tr>
+                <td>计算机网络</td>
+                <td>电子科技大学</td>
+                <td><a href="javascript:;" class="get">get</a></td>
+            </tr>
+            <tr>
+                <td>通信概论</td>
+                <td>成都理工</td>
+                <td><a href="javascript:;" class="get">get</a></td>
+            </tr>
+            <tr>
+                <td>电影鉴赏</td>
+                <td>四川大学</td>
+                <td><a href="javascript:;" class="get">get</a></td>
+            </tr>
+            <tr>
+                <td>飞机修理</td>
+                <td>西南航空</td>
+                <td><a href="javascript:;" class="get">get</a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="mask"></div>
+<div id="new_window">
+    <div class="new_win_title">
+        <spam>新增</spam>
+        <span id="new_cancle">X</span>
+    </div>
+    <div class="new_win_content">
+        <label>学科：<input type="input" id="new_subject"></label><br>
+        <label>学院：<input type="input" id="new_shcool"></label>
+    </div>
+    <div class="new_content_submit">
+        <input type="button" value="提交" id="new_commit">
+    </div>
+</div>
 </body>
 </html>
