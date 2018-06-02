@@ -1,0 +1,23 @@
+1.为动态添加元素绑定事件使用delegate()(或者on()方法)的方法才有效
+2.jQuery.off()
+    1.父元素和子元素的事件全部解绑
+    2.多个事件中间使用空格隔开
+3.jQuery.each()
+    1.是用来遍历jquery对象
+    2.遍历结果都是DOM对象，如果需要使用jQuery对象则需先把DOM对象转为jQuery对象
+4.多库共存
+    1.指一个html文件引入了多个的js文件库
+    2.可以使用对象.noConflict()方法释放权限给另一个变量
+5.在jQuery对象中，判断一个元素是否存在就是判断此元素.length()是否等于0，等于0则不存在
+6.常用宽高属性
+    1.jQuery.innerWidth()
+        1.返回元素包含内边距的宽度
+    1.jQuery.innerHeight()
+        1.返回元素包含内边距的高度
+    1.jQuery.outerWidth()
+        1.返回元素包含边框、内边距、外边距的宽度
+    1.jQuery.outerHeight()
+        1.返回元素包含边框、内边距、外边距的高度
+7.jQuery的常用插件
+    1.轮播图
+    2.抽奖
