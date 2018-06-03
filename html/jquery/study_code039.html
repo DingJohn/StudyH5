@@ -2,9 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>模拟评分</title>
+    <style>
+        #uu {
+            list-style: none;
+        }
+
+        #uu li {
+            float: left;
+            font-size: 40px;
+            font-weight: bold;
+            color: yellow;
+            cursor: pointer;
+        }
+    </style>
+    <script src="../../js/jquery/jquery-1.12.4.js"></script>
+    <script>
+        $(function () {
+            let index = 0;
+            $("#uu li").mouseenter(function () {//鼠标进入
+                $(this).text("★").prevAll().text("★").end().nextAll().text("☆");
+            }).click(function () {//鼠标点击
+                index = $(this).index();
+                $(this).attr("index", index).siblings().removeAttr("index");
+                $(this).text("★");
+            }).mouseleave(function () {//鼠标离开
+                $("#uu li:eq(" + index + ")").text("★").prevAll().text("★").end().nextAll().text("☆");
+            });
+        });
+    </script>
 </head>
 <body>
-$END$
+
+<ul id="uu">
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+    <li>☆</li>
+</ul>
+
 </body>
 </html>
