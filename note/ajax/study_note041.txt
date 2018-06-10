@@ -1,0 +1,7 @@
+1.Ajax
+    1.局部刷新，js内部发请求的东西
+    2.涉及到Ajax的访问请求不能使用文件的方式
+2.Ajax快速上手
+    1.var xhr = new XMLHTTPSRequest();
+    2.xhr.open('POT/GET','完整的url地址');
+    3.xhr.send();
