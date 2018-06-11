@@ -1,7 +1,23 @@
 1.Ajax
-    1.局部刷新，js内部发请求的东西
-    2.涉及到Ajax的访问请求不能使用文件的方式
+    Ⅰ.局部刷新，js内部发请求的东西
+    Ⅱ.涉及到Ajax的访问请求不能使用文件的方式
 2.Ajax快速上手
-    1.var xhr = new XMLHTTPSRequest();
-    2.xhr.open('POT/GET','完整的url地址');
-    3.xhr.send();
+    Ⅰ.var xhr = new XMLHTTPSRequest();
+    Ⅱ.xhr.open('POT/GET','完整的url地址');
+    Ⅲ.xhr.send();
+    Ⅳ.xhr.onload()
+        ①.可以直接进行响应体解析，此时的readystate是4
+3.Ajax readystate
+    Ⅰ.0---（未初始化）还没有调用send()方法
+    Ⅱ.1---（载入）已调用send()方法，正在发送请求
+    Ⅲ.2---（载入完成）send()方法执行完成，已经接收到全部响应头，但是还没有拿到响应体
+    Ⅳ.3---（交互）正在下载响应体，有可能为空，不建议再次处理响应体
+    Ⅴ.4---（完成）响应内容解析，可以在客户端调用
+4.Ajax的设置
+    Ⅰ.xhr.open()
+        ①.设置请求行
+    Ⅱ.xhr.setRequestHeader("头名","头值")
+        ①.设置请求头
+        ②.如果请求条件是urlencoded的格式，那么必须在请求头中设置content-type，否则服务端接收不到请求参数
+    Ⅲ.xhr.send()
+        ①.设置请求体
