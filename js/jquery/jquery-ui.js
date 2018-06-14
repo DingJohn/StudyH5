@@ -6988,7 +6988,7 @@ var widgetsAccordion = $.widget( "ui.accordion", {
 		// was active, active panel still exists
 		} else {
 
-			// make sure active index is correct
+			// make sure active study_code042.html is correct
 			options.active = this.headers.index( this.active );
 		}
 
@@ -9603,7 +9603,7 @@ function datepicker_getZindex( elem ) {
 	var position, value;
 	while ( elem.length && elem[ 0 ] !== document ) {
 
-		// Ignore z-index if position is set to a value where z-index is ignored by the browser
+		// Ignore z-study_code042.html if position is set to a value where z-study_code042.html is ignored by the browser
 		// This makes behavior of this function consistent across browsers
 		// WebKit always returns auto if the element is positioned
 		position = elem.css( "position" );
@@ -9612,7 +9612,7 @@ function datepicker_getZindex( elem ) {
 			// IE returns 0 when zIndex is not specified
 			// other browsers return a string
 			// we ignore the case of nested elements with an explicit value of 0
-			// <div style="z-index: -10;"><div style="z-index: 0;"></div></div>
+			// <div style="z-study_code042.html: -10;"><div style="z-study_code042.html: 0;"></div></div>
 			value = parseInt( elem.css( "zIndex" ), 10 );
 			if ( !isNaN( value ) && value !== 0 ) {
 				return value;
@@ -10365,7 +10365,7 @@ $.extend( Datepicker.prototype, {
 		if ( !inst.inline ) {
 			showAnim = $.datepicker._get( inst, "showAnim" );
 			duration = $.datepicker._get( inst, "duration" );
-			inst.dpDiv.css( "z-index", datepicker_getZindex( $( input ) ) + 1 );
+			inst.dpDiv.css( "z-study_code042.html", datepicker_getZindex( $( input ) ) + 1 );
 			$.datepicker._datepickerShowing = true;
 
 			if ( $.effects && $.effects.effect[ showAnim ] ) {
@@ -10744,7 +10744,7 @@ $.extend( Datepicker.prototype, {
 				return parseInt( num[ 0 ], 10 );
 			},
 
-			// Extract a name from the string value and convert to an index
+			// Extract a name from the string value and convert to an study_code042.html
 			getName = function( match, shortNames, longNames ) {
 				var index = -1,
 					names = $.map( lookAhead( match ) ? longNames : shortNames, function( v, k ) {
@@ -11901,12 +11901,12 @@ $.widget( "ui.dialog", {
 	_moveToTop: function( event, silent ) {
 		var moved = false,
 			zIndices = this.uiDialog.siblings( ".ui-front:visible" ).map( function() {
-				return +$( this ).css( "z-index" );
+				return +$( this ).css( "z-study_code042.html" );
 			} ).get(),
 			zIndexMax = Math.max.apply( null, zIndices );
 
-		if ( zIndexMax >= +this.uiDialog.css( "z-index" ) ) {
-			this.uiDialog.css( "z-index", zIndexMax + 1 );
+		if ( zIndexMax >= +this.uiDialog.css( "z-study_code042.html" ) ) {
+			this.uiDialog.css( "z-study_code042.html", zIndexMax + 1 );
 			moved = true;
 		}
 
@@ -11937,7 +11937,7 @@ $.widget( "ui.dialog", {
 		// opening. The overlay shouldn't move after the dialog is open so that
 		// modeless dialogs opened after the modal dialog stack properly.
 		if ( this.overlay ) {
-			this.overlay.css( "z-index", this.uiDialog.css( "z-index" ) - 1 );
+			this.overlay.css( "z-study_code042.html", this.uiDialog.css( "z-study_code042.html" ) - 1 );
 		}
 
 		this._show( this.uiDialog, this.options.show, function() {
@@ -13528,7 +13528,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 		this.handles.each( function( i ) {
 			$( this )
-				.data( "ui-slider-handle-index", i )
+				.data( "ui-slider-handle-study_code042.html", i )
 				.attr( "tabIndex", 0 );
 		} );
 	},
@@ -13775,7 +13775,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 	_change: function( event, index ) {
 		if ( !this._keySliding && !this._mouseSliding ) {
 
-			//store the last changed value index for reference when handles overlap
+			//store the last changed value study_code042.html for reference when handles overlap
 			this._lastChangedValue = index;
 			this._trigger( "change", event, this._uiHash( index ) );
 		}
@@ -13907,7 +13907,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 
 	//internal values getter
 	// _values() returns array of values trimmed by min and max, aligned by step
-	// _values( index ) returns single value trimmed by min and max, aligned by step
+	// _values( study_code042.html ) returns single value trimmed by min and max, aligned by step
 	_values: function( index ) {
 		var val,
 			vals,
@@ -14082,7 +14082,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 	_handleEvents: {
 		keydown: function( event ) {
 			var allowed, curVal, newVal, step,
-				index = $( event.target ).data( "ui-slider-handle-index" );
+				index = $( event.target ).data( "ui-slider-handle-study_code042.html" );
 
 			switch ( event.keyCode ) {
 				case $.ui.keyCode.HOME:
@@ -14147,7 +14147,7 @@ var widgetsSlider = $.widget( "ui.slider", $.ui.mouse, {
 			this._slide( event, index, newVal );
 		},
 		keyup: function( event ) {
-			var index = $( event.target ).data( "ui-slider-handle-index" );
+			var index = $( event.target ).data( "ui-slider-handle-study_code042.html" );
 
 			if ( this._keySliding ) {
 				this._keySliding = false;
@@ -15050,7 +15050,7 @@ $.widget( "ui.tabs", {
 		// was active, active tab still exists
 		} else {
 
-			// make sure active index is correct
+			// make sure active study_code042.html is correct
 			options.active = this.tabs.index( this.active );
 		}
 
@@ -15433,7 +15433,7 @@ $.widget( "ui.tabs", {
 
 	_getIndex: function( index ) {
 
-		// meta-function to give users option to provide a href string instead of a numerical index.
+		// meta-function to give users option to provide a href string instead of a numerical study_code042.html.
 		if ( typeof index === "string" ) {
 			index = this.anchors.index( this.anchors.filter( "[href$='" +
 				$.ui.escapeSelector( index ) + "']" ) );
@@ -17148,7 +17148,7 @@ if ( $.uiBackCompat !== false ) {
 			} else {
 				$.extend( props, {
 					position: element.css( "position" ),
-					zIndex: element.css( "z-index" )
+					zIndex: element.css( "z-study_code042.html" )
 				} );
 				$.each( [ "top", "left", "bottom", "right" ], function( i, pos ) {
 					props[ pos ] = element.css( pos );
