@@ -1,0 +1,396 @@
+/*进入购物中心*/
+.enter_shopping {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    z-index: 1000;
+}
+
+/*点击查看更多*/
+.more {
+    position: absolute;
+    right: 50px;
+    bottom: 70px;
+    z-index: 1000;
+    animation: more 0.5s linear infinite alternate;
+    cursor: pointer;
+}
+
+/*查看更多按钮动画*/
+@keyframes more {
+    from {
+    }
+    to {
+        right: 50px;
+        bottom: 50px;
+    }
+}
+
+/*设置每屏的中间盒子*/
+.content {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    background-color: rgba(0, 0, 0, .1);
+    left: 50%;
+    margin-left: -450px;
+    bottom: 0;
+    text-align: center;
+}
+
+/*第一屏*/
+.section01 {
+    background: url("../../img/h5c3/01-bg.png") no-repeat center bottom;
+}
+
+/*气球*/
+.section01 .fly {
+    position: absolute;
+    top: -20px;
+    right: -30px;
+    animation: fly 1s linear infinite alternate;
+}
+
+/*气球的动画*/
+@keyframes fly {
+    from {
+    }
+    to {
+        top: 30px;
+        right: -30px;
+    }
+}
+
+/*商品*/
+.section01 .goods {
+    position: absolute;
+    top: 240px;
+    left: 35px;
+}
+
+/*沙发*/
+.section01 .sofa {
+    position: absolute;
+    top: 160px;
+    left: 220px;
+    animation: sofa 0.8s linear infinite alternate;
+}
+
+/*沙发的动画效果*/
+@keyframes sofa {
+    from {
+    }
+    to {
+        top: 180px;
+        left: 220px;
+    }
+}
+
+/*第二屏*/
+.section02 {
+    background: url("../../img/h5c3/02-bg.png") no-repeat center bottom;
+}
+
+/*标题*/
+.section02 .title {
+    text-align: center;
+}
+
+/*首先隐藏第二张标题*/
+.section02 .title img:last-child {
+    position: absolute;
+    opacity: 0;
+}
+
+/*隐藏第一张图片*/
+.section02.now .title img:first-child {
+    position: absolute;
+    opacity: 0;
+}
+
+/*显示第二张图片*/
+.section02.now .title img:last-child {
+    position: static;
+    transition: all 1s linear;
+    opacity: 1;
+}
+
+/*设置搜索框的位置*/
+.section02 .search {
+    position: absolute;
+    right: 148px;
+    top: 116px;
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+/*设置关键字在搜索框内*/
+.section02 .search img:last-child {
+    position: absolute;
+    right: 60px;
+    top: 5px;
+    opacity: 0;
+}
+
+/*设置搜索框的动画*/
+.section02.now .search {
+    animation: search 3s linear;
+    opacity: 1;
+}
+
+/*输入框动画*/
+@keyframes search {
+    0% {
+        opacity: 1;
+        right: -1000px;
+        top: 250px;
+    }
+    33% {
+        right: 310px;
+        top: 250px;
+    }
+    66% {
+        right: 310px;
+        top: 250px;
+    }
+    100% {
+        right: 148px;
+        top: 116px;
+    }
+}
+
+/*设置关键字的动画*/
+.section02.now .search img:last-child {
+    animation: key 1s linear 1s forwards;
+}
+
+/*设置关键字的动画*/
+@keyframes key {
+    from {
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/*设置商品列表的位置*/
+.section02 .goods {
+    position: absolute;
+    top: 170px;
+    left: 222px;
+    transform-origin: right bottom;
+    transform: scale(0);
+}
+
+/*设置绑定商品动画*/
+.section02.now .goods {
+    animation: goods2 1s linear 3s forwards;
+}
+
+/*设置商品动画*/
+@keyframes goods2 {
+    from {
+    }
+    to {
+        transform: none;
+    }
+}
+
+/*设置沙发的位置*/
+.section02 .sofa {
+    position: absolute;
+    top: 132px;
+    left: 286px;
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+/*离开第二屏的时候沙发显示*/
+.section02.leave .sofa {
+    opacity: 1;
+    z-index: 1000;
+    animation: sofa02 0.7s linear;
+}
+
+/*沙发离开第二屏时的动画*/
+@keyframes sofa02 {
+    from {
+    }
+    to {
+        transform: translate(-80px, 700px);
+    }
+}
+
+/*第三屏背景*/
+.section03 {
+    background: url("../../img/h5c3/03-bg.png") no-repeat center bottom;
+}
+
+/*设置沙发初始的位置*/
+.section03 .sofa {
+    opacity: 0;
+    position: absolute;
+    left: 206px;
+    top: 190px;
+}
+
+.section03.now .sofa {
+    opacity: 1;
+}
+
+/*设置颜色尺码的位置*/
+.section03 .color_size {
+    position: absolute;
+    right: 115px;
+    bottom: 162px;
+}
+
+/*设置第一个颜色尺码*/
+.section03 .color_size img:first-child {
+    position: absolute;
+}
+
+/*设置沙发落地时第一个颜色尺码的样式*/
+.section03.now .color_size img:first-child {
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+/*设置结算的样式*/
+.section03 .buy {
+    position: absolute;
+    right: 150px;
+    bottom: 84px;
+}
+
+/*设置第一个结算的样式*/
+.section03 .buy img:first-child {
+    position: absolute;
+}
+
+/*设置沙发落地时第一个购买的样式隐藏*/
+.section03.now .buy img:first-child {
+    opacity: 0;
+    transition: all 2s linear;
+}
+
+/*离开第三屏的时候*/
+.section03.leave .sofa {
+    opacity: 1;
+    z-index: 1000;
+    animation: sofa03 0.7s linear;
+}
+
+/*沙发离开第三屏时的动画*/
+@keyframes sofa03 {
+    from {
+        transform: rotateZ(45deg);
+        z-index: 1;
+    }
+    to {
+        transform: translate(120px, 720px) rotateZ(30deg);
+        z-index: 1;
+    }
+}
+
+/*第四屏*/
+.section04 {
+    background: url("../../img/h5c3/04-bg.png") no-repeat center bottom;
+}
+
+/*百云*/
+.section04 .cloud {
+    position: absolute;
+    top: -30px;
+    left: -300px;
+    animation: cloud 20s linear infinite alternate;
+}
+
+/*白云动画，飘起来*/
+@keyframes cloud {
+    from {
+    }
+    to {
+        transform: translateX(1200px);
+    }
+}
+
+/*设置提示的位置*/
+.section04 .tips {
+    position: absolute;
+    left: 50%;
+    top: 120px;
+    margin-left: -210px;
+}
+
+/*显示第一个提示*/
+.section04 .tips img:first-child {
+    position: absolute;
+}
+
+/*设置第二个提示下显示*/
+.section04.now .tips img:first-child {
+    opacity: 0;
+    transition: all 0.1s linear 3s;
+}
+
+/*隐藏电脑*/
+.section04 .computer {
+    opacity: 0;
+    position: absolute;
+    left: 306px;
+    top: 190px;
+}
+
+/*购物车跑了电脑出来*/
+.section04.now .computer {
+    opacity: 1;
+    transition: all 1s linear 3s;
+}
+
+/*调整收货地址的位置*/
+.section04 .computer img:last-child {
+    opacity: 0;
+    position: absolute;
+    left: 54px;
+    top: 60px;
+}
+
+/*电脑出来了收货地址也出来*/
+.section04.now .computer img:last-child {
+    opacity: 1;
+    transition: all 1s linear 5s;
+}
+
+/*调整购物车的位置*/
+.section04 .car {
+    position: relative;
+}
+
+/*设置购物车的层级*/
+.section04 .car img:first-child {
+    position: absolute;
+    left: 200px;
+    top: 250px;
+    z-index: 2;
+}
+
+/*调整购物车沙发的位置*/
+.section04 .car img:last-child {
+    display: none;
+    position: absolute;
+    left: 355px;
+    top: 215px;
+    z-index: 1;
+}
+
+/*设置1s中沙发显示*/
+.section04.now .car img:last-child {
+    display: block;
+}
+
+/*购物车跑了*/
+.section04.now .car {
+    transform: translateX(1000px);
+    transition: all 3s linear;
+}
