@@ -11,3 +11,9 @@
         ②.性能相对帧动画会更好，在能使用c3的地方尽量使用c3
     Ⅲ.forward
         ①.保持动画完成时的状态
+4.问题
+    Ⅰ.元素的定位方式会影响z-index的使用，当z-index不起作用时可先检查元素的position属性值
+    Ⅱ.要想动画达到有渐显的效果可以使用opacity与transition搭配使用
+5.translate2d与translate3d的区别
+    Ⅰ.在移动端使用3d转换可以性能优化（如果设备有3d加速引擎GPU可以提高性能，而2d无法调用GPU）
+6.transform会有提高层级的作用
