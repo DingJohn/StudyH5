@@ -31,7 +31,6 @@
     position: absolute;
     width: 900px;
     height: 600px;
-    background-color: rgba(0, 0, 0, .1);
     left: 50%;
     margin-left: -450px;
     bottom: 0;
@@ -208,7 +207,7 @@
 /*离开第二屏的时候沙发显示*/
 .section02.leave .sofa {
     opacity: 1;
-    z-index: 1000;
+    z-index: 100;
     animation: sofa02 0.7s linear;
 }
 
@@ -277,7 +276,7 @@
 /*离开第三屏的时候*/
 .section03.leave .sofa {
     opacity: 1;
-    z-index: 1000;
+    z-index: 3;
     animation: sofa03 0.7s linear;
 }
 
@@ -285,11 +284,9 @@
 @keyframes sofa03 {
     from {
         transform: rotateZ(45deg);
-        z-index: 1;
     }
     to {
         transform: translate(120px, 720px) rotateZ(30deg);
-        z-index: 1;
     }
 }
 
@@ -372,7 +369,7 @@
     position: absolute;
     left: 200px;
     top: 250px;
-    z-index: 2;
+    z-index: 4;
 }
 
 /*调整购物车沙发的位置*/
@@ -381,7 +378,7 @@
     position: absolute;
     left: 355px;
     top: 215px;
-    z-index: 1;
+    z-index: 3;
 }
 
 /*设置1s中沙发显示*/
@@ -393,4 +390,448 @@
 .section04.now .car {
     transform: translateX(1000px);
     transition: all 3s linear;
+}
+
+/*第五屏*/
+.section05 {
+    background: url("../../img/h5c3/05-bg.png") no-repeat center bottom;
+}
+
+/*设置标题*/
+.section05 .title {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/*设置银行卡的位置*/
+.section05 .order img:first-child {
+    position: absolute;
+    left: 0px;
+    top: 35%;
+    z-index: 4;
+}
+
+/*设置账单的位置*/
+.section05 .order img:nth-child(2) {
+    opacity: 0;
+    position: absolute;
+    left: 15%;
+    top: 131px;
+}
+
+/*鼠标点击显示账单*/
+.section05.now .order img:nth-child(2) {
+    animation: order05 0.7s linear 1s forwards;
+}
+
+/*账单显示的动画*/
+@keyframes order05 {
+    from {
+        opacity: 1;
+        top: 200px;
+    }
+    to {
+        opacity: 1;
+        top: 131px;
+    }
+}
+
+/*设置沙发的位置*/
+.section05 .order img:last-child {
+    opacity: 0;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+}
+
+/*点击鼠标之后沙发掉下来*/
+.section05.now .order img:last-child {
+    animation: sofa05 0.7s linear 1s forwards;
+}
+
+/*沙发掉下来的动画*/
+@keyframes sofa05 {
+    from {
+        opacity: 1;
+        top: -100px;
+    }
+    to {
+        opacity: 1;
+        top: 60%;
+    }
+}
+
+/*沙发离开到下面*/
+.section05.leave .order img:last-child {
+    z-index: 3;
+    opacity: 1;
+    animation: sofa0501 1.5s linear;
+}
+
+/*沙发到下面的动画*/
+@keyframes sofa0501 {
+    from {
+        left: 10%;
+        top: 60%;
+    }
+    to {
+        top: 750px;
+        left: 60px;
+        transform: scale(0.3);
+    }
+}
+
+/*设置鼠标的位置*/
+.section05 .mouse {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    height: 400px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.section05 .mouse img {
+    position: absolute;
+    top: -400px;
+    right: 0;
+}
+
+/*隐藏第二个*/
+.section05 .mouse img:first-child {
+    z-index: 2;
+    position: absolute;
+}
+
+/*隐藏第一个鼠标*/
+.section05.now .mouse img:first-child {
+    opacity: 0;
+    transition: opacity 1s linear 0.7s;
+}
+
+/*设置手的位置*/
+.section05 .hand {
+    z-index: 3;
+    opacity: 0;
+    position: absolute;
+    right: 80px;
+    bottom: -10px;
+}
+
+/*页面加载即开始手的动画*/
+.section05.now .hand {
+    opacity: 1;
+    animation: hand05 0.7s linear;
+}
+
+/*手放到鼠标的动画*/
+@keyframes hand05 {
+    from {
+        bottom: -200px;
+    }
+    to {
+        bottom: -10px;
+    }
+}
+
+/*第六屏*/
+.section06 {
+    background: url("../../img/h5c3/06-bg.png") no-repeat -300px bottom;
+}
+
+/*设置第一片白云的动画*/
+.section06 .cloud img:first-child {
+    position: relative;
+    top: 0;
+    left: -200px;
+    animation: cloud0601 10s linear infinite alternate;
+}
+
+/*白云动画，飘起来*/
+@keyframes cloud0601 {
+    from {
+    }
+    to {
+        transform: translateX(1200px);
+    }
+}
+
+/*设置第二片白云的动画*/
+.section06 .cloud img:last-child {
+    position: absolute;
+    top: -30px;
+    left: -300px;
+    animation: cloud0602 20s linear infinite alternate;
+}
+
+/*白云动画，飘起来*/
+@keyframes cloud0602 {
+    from {
+    }
+    to {
+        transform: translateX(1200px);
+    }
+}
+
+/*设置盒子的位置*/
+.section06 .box {
+    position: absolute;
+    left: -400px;
+    top: 160px;
+}
+
+/*设置盒子的动画*/
+.section06.now .box {
+    z-index: 4;
+    animation: box06 2s linear;
+}
+
+/*盒子的动画*/
+@keyframes box06 {
+    0% {
+        left: -400px;
+        top: 160px;
+    }
+    30% {
+        left: 100px;
+        top: 160px;
+    }
+    60% {
+        left: 100px;
+        top: 160px;
+    }
+    100% {
+        left: 80px;
+        top: 440px;
+        transform: scale(0.4);
+    }
+}
+
+/*设置车的位置*/
+.section06 .address img:first-child {
+    z-index: 5;
+    position: absolute;
+    left: 80px;
+    bottom: 70px;
+}
+
+/*设置物流进度的提示*/
+.section06 .address img:nth-child(2),
+.section06 .address img:last-child {
+    opacity: 0;
+    position: absolute;
+    left: 250px;
+    bottom: 180px;
+}
+
+/*设置物流一*/
+.section06.now .address img:nth-child(2) {
+    animation: address01 1s linear 3s;
+}
+
+/*设置物流一的显示动画*/
+@keyframes address01 {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/*设置物流二*/
+.section06.now .address img:last-child {
+    opacity: 1;
+    transition: opacity 1s linear 4s;
+}
+
+/*设置提示文字*/
+.section06 .text {
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+/*设置第一条文字的定位信息*/
+.section06 .text img:first-child {
+    position: absolute;
+}
+
+/*当到达收货地址的时候隐第一条文字*/
+.section06.now .text img:first-child {
+    opacity: 0;
+    transition: opacity 1s linear 5s;
+}
+
+/*背景的移动*/
+.section06.now {
+    transition: background 2s linear 3s;
+    background: url("../../img/h5c3/06-bg.png") no-repeat -1050px bottom;
+}
+
+/*物流没到隐藏人物*/
+.section06 .personal img {
+    opacity: 0;
+}
+
+/*快递车没到，快递员不下车*/
+.section06 .personal img:first-child {
+    transform: scale(0);
+}
+
+/*设置送货员的位置*/
+.section.now .personal img:first-child {
+    position: absolute;
+    animation: courier06 2s linear 5s forwards;
+}
+
+/*设置送货员的动画*/
+@keyframes courier06 {
+    0% {
+        opacity: 1;
+        right: 400px;
+        bottom: 0;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        right: 400px;
+        bottom: 100px;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 1;
+        right: 300px;
+        bottom: 100px;
+        transform: scale(1);
+    }
+}
+
+/*快递没到，收货人隐藏*/
+.section06 .personal img:nth-child(3) {
+    z-index: 3;
+    transform: scale(0);
+}
+
+/*设置收货人的位置*/
+.section06.now .personal img:nth-child(3) {
+    position: absolute;
+    animation: receiver06 2s linear 9s forwards;
+}
+
+/*收货人的动画*/
+@keyframes receiver06 {
+    0% {
+        opacity: 1;
+        right: -40px;
+        bottom: 10px;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        right: 90px;
+        bottom: 100px;
+        transform: scale(1);
+    }
+}
+
+/*设置say的位置*/
+.section06.now .personal img:nth-child(2) {
+    position: absolute;
+    right: 220px;
+    bottom: 360px;
+    opacity: 1;
+    transition: opacity 1s linear 7s;
+}
+
+/*快递没到，门隐藏*/
+.section06 .personal img:last-child {
+    z-index: 2;
+}
+
+/*设置门的位置*/
+.section06.now .personal img:last-child {
+    opacity: 1;
+    position: absolute;
+    right: -33px;
+    bottom: 116px;
+    transition: opacity 1s linear 8s;
+}
+
+/*第七屏*/
+.section07 {
+    background: url("../../img/h5c3/07-bg.png") no-repeat center bottom;
+}
+
+/*设置星星的位置*/
+.section07 .star {
+    position: absolute;
+    left: 158px;
+    top: 142px;
+}
+
+/*设置星星的样式*/
+.section07 .star img {
+    float: left;
+    margin-right: 6px;
+    opacity: 0;
+}
+
+/*设置好评的位置*/
+.section07 .text {
+    position: absolute;
+    left: 175px;
+    top: 180px;
+}
+
+/*初识隐藏文本*/
+.section07 .text img {
+    opacity: 0;
+}
+
+/*设置绑定好评的动画*/
+.section07.now .text img {
+    animation: text07 1s linear 0.8s forwards;
+}
+
+/*设置好评的动画*/
+@keyframes text07 {
+    0% {
+        transform-origin: left bottom;
+        opacity: 1;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*第八屏*/
+.section08 {
+    background: url("../../img/h5c3/08-bg.png");
+}
+
+/*设置按钮的位置*/
+.section08 .btn img:first-child {
+    position: absolute;
+}
+
+/*设置再来一次按钮的位置*/
+.section08 .again img {
+    position: absolute;
+    top: 100px;
+    right: 0;
+}
+
+/*设置手的默认地址*/
+.section08 .hand img {
+    position: absolute;
+    margin-top: -80px;
+    margin-left: -80px;
 }
