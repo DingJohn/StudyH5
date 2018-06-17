@@ -1,0 +1,2 @@
+1.视差效果，具体页面查看QQ_TIM
+    Ⅰ.background-attachment(具体开发中不会使用，会使用一个插件)
