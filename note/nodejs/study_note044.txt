@@ -1,0 +1,43 @@
+1.Node.js
+    1.查询node版本号
+        1.在cmd面板输入命令node --version
+        2.或者在cmd面板输入node -v
+    2.cmd运行js
+        1.进入到文件所在路径
+        2.cmd面板输入node 文件名即可输出结果
+        3.js文件最好不要使用中文
+        4.js文件不能命名为node.js
+2.与浏览器js的区别
+    1.浏览器中的javaScript没有文件操作的能力
+    2.node中的javaScript是具备文件操作的能力
+3.Node常用模块
+    1.fs模块
+        1.file-system，此模块提供所有对文件操作的API
+        2.步骤
+            1.使用require方法加载fs模块
+            2.使用fs.readFile('文件路径',fn)方法读取文件
+                1.fn有两个参数
+                    1.error
+                        1.如果读取失败，返回的就是文件对象
+                        2.如果读取成功则为null
+                    2.data
+                        1.如果读取成功则返回数据，因为文件存储默认为二进制，所以需要对得到结果.tostring()
+                        2.如果读取失败则返回错误对象
+    2.http模块
+        1.http服务
+    3.path模块
+        1.路径操作模块
+    4.os模块
+        1.系统操作模块
+4.node创建网络服务器步骤
+    1.var http = require('http')
+    2.http = http.createServer()
+    3.http.on('request',function(request,respone){})
+        1.request.url可以获取到请求路径
+        2.respone.end或respone.write只能返回字符串
+        3.json.stringify()可以将json格式转换为字符串格式的内容
+        4.respone.end会出现中文乱码的情况，所以需要指定编码格式
+            1.respone.setHeader('content-Type','text/plain;charset=utf-8')设置相应内容的格式
+    4.http.listen('8080',fun)
+5.node中要在一个js文件访问另一个js文件的变量，需使用exports.变量名的方式才能在另一个js文件访问
+6.文件编码格式可以参考osChina
