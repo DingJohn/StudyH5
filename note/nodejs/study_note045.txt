@@ -1,0 +1,19 @@
+1.JavaScript代码规范
+    1.JavaScript Standard Style
+    2.Airbnb JavaScript
+    3.`开头是EcmaScript 6中新的一种字符串包裹方式，叫做模版字符串，支持换行和方便拼接
+    4.当一行代码是以“[、(、`”开头的，那么可以在最前面加上“;”以避免某些问题
+2.node中使用art-template
+    1.安装：npm install art-template
+        1.该命令在哪里执行就会把包下载到哪里，默认会新建一个mode_modules文件
+    2.在需要使用的地方引入art-template：require(‘art-template’)
+    3.查文档，使用模版引擎API，template.render(要替换的,替换的内容)
+3.node中template的渲染步骤
+    1.读取要渲染的html文件内容
+    2.将读取到的html内容的字符串格式交给render方法
+    3.respone.send()将渲染结果发送给客户端
+4.服务端渲染和客户端渲染的区别
+    1.客户端渲染不利于SEO
+    2.服务端渲染是可以被爬虫抓取到的，客户端一步渲染很难被爬虫抓取
+    3.真正的网站既不是纯异步，也不是纯服务端渲染
+    4.
