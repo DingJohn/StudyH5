@@ -238,9 +238,12 @@ fn(function(data) {
     - 会自动遍历调用该方法的数组，并有一个回调函数，还函数有一个参数item就是当前下标的元素
 
    ```javascript
-   arr.find(function(item) {
-       //item就是当前下标的元素
-   })
+//返回符合条件的第一个元素 
+[1, 5, 10, 15].find(function(value, index, arr) {
+  return value > 9
+}) 
+
+// 10
    ```
 
 - finIndex
@@ -249,9 +252,12 @@ fn(function(data) {
   - 专门用来根据条件查找元素的下标
 
   ```javascript
-  arr.findIndex(function(item) {
-      //返回item当前下标
-  })
+  //返回符合条件的第一个元素的下表
+  [1, 5, 10, 15].findIndex(function(value, index, arr) {
+    return value > 9
+  }) 
+  
+  // 2
   ```
 
   
