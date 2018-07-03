@@ -1,5 +1,22 @@
 # Node.js 4
 
+## npm
+
+### 初始化npm
+
+```shell
+#-y表示自动配置package-json文件，无需自己输入
+npm init -y
+```
+
+### package.json和package-lock.json
+
+- npm 5 以前是没有 `package-lock.json` 文件的，npm 5 以后才有
+  - npm 5 以后的安装包毋须 `--save` ，npm会自动保存
+- 当安装包的时候，npm都会自动更新或者安装 `pakage-lock.json` 文件
+  - `package-lock.json` 文件会保存 `node_modules` 中所有包的信息（版本、下载地址）
+- `pakage-lock.json` 文件还有个作用就是锁住引入包的版本，以免意外升级导致其他问题
+
 ## node自动重启服务器
 
 ### nodemon
@@ -201,6 +218,18 @@ app.use('/a', express.static('./public/'))
     //最后在服务入口中挂载router
     app.use(router)
     ```
+
+### Express处理404
+
+express处理 `404页面` 需要使用 `中间件` 来配置，详情在后期会介绍，只需要在路由之后加：
+
+```javascript
+app.use(function(req, res) {
+    //所有未处理的请求路径都会到此集中处理，包括404
+})
+```
+
+
 
 ## CRUD路由设计
 
