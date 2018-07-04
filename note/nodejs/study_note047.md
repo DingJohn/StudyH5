@@ -219,6 +219,40 @@ app.use('/a', express.static('./public/'))
     app.use(router)
     ```
 
+### Express配置使用 `express-session` 操作
+
+> [官方参考文档](https://github.com/expressjs/session)
+
+安装：
+
+```javascript
+npm install express-session
+```
+
+配置：
+
+```javascript
+//该插件为 req 请求对象的一个成员：req.session 默认是一个对象
+app.use(session({
+    //配置加密字符串，会在原有加密字符串基础上拼接上此字符串再加密，目的是为了更强的安全性
+    secret: 'hello kitty',
+    resave: false,
+    saveUninitialized: false //为 true 表示无论是否使用 session 都会分配一把钥匙，为 false 表示使用时才分配
+}))
+```
+
+使用：
+
+```javascript
+//添加 session 数据
+req.session.foo = 'userName'
+
+//获取 session 数据
+req.session.foo 
+```
+
+**提示：** 默认 session 是内存存储的，服务器一重启就会丢失，真正的生产环境会把 session 进行持久化存储
+
 ### Express处理404
 
 express处理 `404页面` 需要使用 `中间件` 来配置，详情在后期会介绍，只需要在路由之后加：
