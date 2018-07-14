@@ -160,4 +160,130 @@
   - 支持　Promise
 - 在 H5 时候，浏览器增加了一个发起一步请求的方法，`fetch` (原生支持 Promise )
   - 由于兼容问题，一般只在移动端使用
-- 
+
+### axios
+
+> Axios 是基于 Promise 的 HTTP库，可以用在浏览器和 node.js 中
+
+安装：
+
+```shell
+npm install axios
+```
+
+请求方法别名（在使用别名的时候，`url` 、`method` 、`data` 这些属性都不必在配置中指定）：
+
+- axios.request(config)
+- axios.get(url[, config])
+- axios.delete(url[, config])
+- axios.head(url[, config])
+- axios.post(url[, data[, config]])
+- axios.put(url[, data[, config]])
+- axios.patch(url[, data[, config]])
+
+## Vue 生命周期
+
+![Vue å®ä¾çå½å¨æ](https://cn.vuejs.org/images/lifecycle.png) 
+
+- beforeCreate
+  - 实例化 初始化之后调用，此时还拿不到 el、data等数据
+- created
+  - 在实例化创建之后，此时可以访问到 data 数据
+  - 适用于发请求，修改 data 的操作
+  - 此时还没有挂载，访问不到el
+- beforeMount
+  - 挂载元素前，还没有渲染 DOM 数据
+- mounted
+  - 挂载渲染已完成，DOM 数据已完成更新
+- beforeUpdate
+  - 数据更新时调用，DOM 还没有得到更新
+- updated
+  - 数据更新之后调用，DOM 已得到更新
+- activated（动态组件）
+  - 组件激活时调用
+- deactivated（动态组件）
+  - 组件停用时调用
+- beforeDestroy
+  - 实例销毁之前
+- destroyed
+  - 实例销毁之后调用，此时实例已被销毁，不在管理模版
+-  errorCaptured（钩子级别的错误捕获）（v2.5.+新增）
+  - 捕获组件中发生的错误
+
+# Vue-router
+
+> [vue-router的官方文档](https://router.vuejs.org/zh/guide)
+
+直接在 vue 的引入后引入即可使用
+
+```html
+<script src="/path/to/vue.js"></script>
+<script src="/path/to/vue-router.js"></script>
+```
+
+# 工具
+
+## 使用`json-server` 来模拟数据接口
+
+> 该工具默认启动自带跨域能力，已经在服务端处理了
+>
+> 真正的场景实在客户端处理跨域的问题（代理服务器）
+
+安装：
+
+```shell
+npm install json-server
+```
+
+使用：
+
+>  创建一个 `json` 文件
+
+启动接口服务：
+
+```shell
+json-server --watch xx.json
+```
+
+增删改查：
+
+- GET /list
+  - 查询所有
+- GET /list/id
+  - 查询单个
+- POST /list
+  - 新增
+- DELETE /list/id
+  - 根据 id 删除
+- PATCH /list/id
+  - 根据id修改
+
+## 接口测试（postman）
+
+##  创建临时服务器（`http-server`）
+
+安装：
+
+```shell
+npm install http-server
+```
+
+查看使用帮助：
+
+```shell
+hs -h
+```
+
+基本使用：
+
+```shell
+# 默认暂用 8080 端口启动一个服务器，直接打开浏览器
+hs -o
+
+# 指定占用端口
+hs -o -p 3001
+
+# 不启用缓存开启
+hs -o -p 3001 -c-1
+```
+
