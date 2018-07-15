@@ -7,7 +7,18 @@
 - V：View 视图界面（HTML）
 - VM：ViewModel 视图数据模型（驱动视图改变的 data 数据）
 
-### M：Model
+## webpack
+
+- [官方网站](https://webpack.js.org)
+- 打包工具，JavaScript 模块打包之后就可以运行在浏览器了
+
+安装：
+
+```shell
+npm install webpack
+```
+
+
 
 
 
