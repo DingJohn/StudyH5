@@ -80,14 +80,6 @@ module.exports = {
 
 ### Loading Image
 
-安装依赖：
-
-```shel
-npm install
-```
-
-
-
 
 
 
