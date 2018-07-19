@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../../js/vue-js/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>hello {{ message }}</h1>
+    <input type="text" v-model="sum">
+    <input type="button" value="点击+1" v-on:click="summation">
+</div>
+<script>
+    let app = new Vue({
+        el: "#app",
+        data: {
+            message: "Vue.js",
+            sum: 0
+        },
+        methods: {
+            summation: function () {
+                app.sum++
+            }
+        }
+    })
+</script>
+</body>
+</html>

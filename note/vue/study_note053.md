@@ -29,7 +29,7 @@ webpack 文件入口路径 文件出口路径
 npm	run 属性名
 ```
 
-### webpack 配置文件
+### webpack 配置文件（webpack.config.js)
 
 ```js
 // 此文件最终在 node 环境下执行
@@ -45,6 +45,39 @@ module.exports = {
 }
 ```
 
+### 自动将 html 打包到 bundle.js 所属目录中
+
+安装依赖：
+
+```she
+npm install -D html-webpack-plugin
+```
+
+配置：
+
+```js
+const path = require('path')
+const htmlWebpackPlugin = require('html-webpack-plugin')
+
+// 导出一个具有特殊属性配置的对象
+module.exports = {
+    entry: './src/main.js',//入口文件模块
+    output: {
+        path: path.join(__dirname, './dist/'),//吃口文件所在模块，path 必须是一个绝对路径
+        filename: 'bundle.js' //打包的结果文件名
+    },
+    plugins: [
+        //该插件的作用就是把 index.html 打包到 bundle.js 所属目录
+        //会自动在 index.html 中引入 script
+        new htmlWebpackPlugin({
+            template: 'index.html'
+        })    
+    ]
+}
+```
+
+
+
 ### Loading CSS
 
 安装依赖：
@@ -55,7 +88,7 @@ module.exports = {
 npm install --save-dev style-loader css-loader
 ```
 
-配置：
+配置（webpack.config.js)：
 
 ```js
 const path = require('path')
@@ -79,6 +112,64 @@ module.exports = {
 ```
 
 ### Loading Image
+
+配置：
+
+```js
+
+    moudle: {
+        rules: {
+            test: /.gif|jpg|svg|png$/,
+            use: [
+                'image-loader'
+            ]
+        }
+```
+
+# Develoment 开发
+
+## Source maps
+
+
+
+##  webpack-dev-server
+
+- 完成自动打包并刷新浏览器
+
+安装依赖：
+
+```shell
+npm i -D webpack-dev-server
+```
+
+配置（```webpack.config.js```)：
+
+```js
+devServer: {
+    //配置 webpack-dev-server 的 www 目录
+    contentBase: './dist'
+}
+```
+
+配置（```package.json```）：
+
+```js
+"script": {
+    "build": "webpack",
+    "watch-build": "webpack --watch",// 修改完成自动打包
+    "dev": "webpack-dev-server --open"// 修改完成自动打包并刷新浏览器
+}
+```
+
+启动开发模式：
+
+```shell
+npm run dev
+```
+
+
+
+## ESLint 代码规范校验
 
 
 

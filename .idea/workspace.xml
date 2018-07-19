@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/index.html" line="31" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d505a46b-928f-455b-a10e-082a88cb6317" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/js/node/study_demo048/node_modules/mongodb/lib/bulk/unordered.js" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1344">
+              <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+              <folding>
+                <element signature="n#template#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>sofa</find>
+      <find>100</find>
+      <find>10</find>
+      <find>section</find>
+      <find>leave</find>
+      <find>鼠标</find>
+      <find>export</find>
+      <find>v-bind</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>exports</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/note/jquery/study_note040.txt" />
+        <option value="$PROJECT_DIR$/html/jquery/study_code040.html" />
+        <option value="$PROJECT_DIR$/html/jquery/study_code039.html" />
+        <option value="$PROJECT_DIR$/note/ajax/study_note041.txt" />
+        <option value="$PROJECT_DIR$/js/h5c3/index.js" />
+        <option value="$PROJECT_DIR$/html/h5c3/index.html" />
+        <option value="$PROJECT_DIR$/css/h5c3/index.css" />
+        <option value="$PROJECT_DIR$/note/h5c3/study_note042.txt" />
+        <option value="$PROJECT_DIR$/html/h5c3/study_code042.html" />
+        <option value="$PROJECT_DIR$/js/h5c3/study_code042.js" />
+        <option value="$PROJECT_DIR$/css/h5c3/study_code042.css" />
+        <option value="$PROJECT_DIR$/html/h5c3/study_code043.html" />
+        <option value="$PROJECT_DIR$/css/h5c3/study_code043.css" />
+        <option value="$PROJECT_DIR$/js/h5c3/study_code043.js" />
+        <option value="$PROJECT_DIR$/note/h5c3/study_note043.txt" />
+        <option value="$PROJECT_DIR$/note/nodejs/study_note044.txt" />
+        <option value="$PROJECT_DIR$/js/node/study_code044.js" />
+        <option value="$PROJECT_DIR$/note/nodejs/study_note045.txt" />
+        <option value="$PROJECT_DIR$/note/nodejs/study_note046.txt" />
+        <option value="$PROJECT_DIR$/note/nodejs/study_note047.md" />
+        <option value="$PROJECT_DIR$/js/node/demo/da.json" />
+        <option value="$PROJECT_DIR$/js/node/demo/public/html/index.html" />
+        <option value="$PROJECT_DIR$/js/node/demo/public/css/dashboard.css" />
+        <option value="$PROJECT_DIR$/js/node/demo/node_modules/bootstrap/dist/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/js/node/demo/db.json" />
+        <option value="$PROJECT_DIR$/js/node/demo/views/index.html" />
+        <option value="$PROJECT_DIR$/js/node/demo/package.json" />
+        <option value="$PROJECT_DIR$/js/node/demo/app.js" />
+        <option value="$PROJECT_DIR$/js/node/demo/router.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/views/index.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/views/edit.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/views/new.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/db.json" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/router.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/public/js/stu_handle.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo047/app.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/package.json" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/public/js/stu_handle.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/node_modules/bootstrap/dist/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/app.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/views/add.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/views/index.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/views/edit.html" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/public/js/db.js" />
+        <option value="$PROJECT_DIR$/js/node/study_demo048/public/js/router.js" />
+        <option value="$PROJECT_DIR$/html/vue/study_code050.html" />
+        <option value="$PROJECT_DIR$/js/vue-js/vue.min.js" />
+        <option value="$PROJECT_DIR$/js/vue-js/vue.js" />
+        <option value="$PROJECT_DIR$/html/vue-js/study_code050.html" />
+        <option value="$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/index.html" />
+        <option value="$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/js/app.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/node_modules" />
+    <handled-path value="$PROJECT_DIR$/js/node/study_demo047/node_modules" />
+    <handled-path value="$PROJECT_DIR$/js/node/study_demo048/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/package.json" />
+      <path value="$PROJECT_DIR$/js/node/study_demo047/package.json" />
+      <path value="$PROJECT_DIR$/js/node/study_demo048/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1346" />
+    <option name="height" value="698" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="StudyH5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyH5" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyH5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyH5" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyH5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyH5" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="vue-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StudyH5" type="b2602c69:ProjectViewProjectNode" />
+              <item name="StudyH5" type="462c0819:PsiDirectoryNode" />
+              <item name="note" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\work\StudyH5\js\node\demo\views" />
+      <recent name="D:\work\StudyH5\js\node\demo\public\css" />
+      <recent name="D:\work\StudyH5\js\jquery" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\StudyH5\js\node\study_demo048\public\css" />
+      <recent name="D:\work\StudyH5\js\node\study_demo048" />
+      <recent name="D:\work\StudyH5\js\h5c3" />
+      <recent name="D:\work\StudyH5\css\h5c3" />
+      <recent name="D:\work\StudyH5\img\h5c3" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d505a46b-928f-455b-a10e-082a88cb6317" name="Default" comment="" />
+      <created>1527526913465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527526913465</updated>
+      <workItem from="1527526915408" duration="13000" />
+      <workItem from="1527526950013" duration="304000" />
+      <workItem from="1527527480523" duration="92000" />
+      <workItem from="1527527595642" duration="132000" />
+      <workItem from="1527529510581" duration="310000" />
+      <workItem from="1527580789529" duration="4188000" />
+      <workItem from="1527594446901" duration="5345000" />
+      <workItem from="1527664614098" duration="12763000" />
+      <workItem from="1527743371338" duration="13165000" />
+      <workItem from="1527836526381" duration="4916000" />
+      <workItem from="1527914084786" duration="1459000" />
+      <workItem from="1527939384464" duration="2028000" />
+      <workItem from="1528031391431" duration="6732000" />
+      <workItem from="1528293059125" duration="76000" />
+      <workItem from="1528629416779" duration="1046000" />
+      <workItem from="1528693479716" duration="7178000" />
+      <workItem from="1528777362644" duration="5648000" />
+      <workItem from="1528865187207" duration="4024000" />
+      <workItem from="1528873194908" duration="2824000" />
+      <workItem from="1528960807811" duration="6787000" />
+      <workItem from="1529044036235" duration="15734000" />
+      <workItem from="1529134249099" duration="14093000" />
+      <workItem from="1529148988896" duration="10674000" />
+      <workItem from="1529221350985" duration="3580000" />
+      <workItem from="1529336349589" duration="23000" />
+      <workItem from="1529389930322" duration="3681000" />
+      <workItem from="1529500512659" duration="284000" />
+      <workItem from="1529566814049" duration="2067000" />
+      <workItem from="1529666959177" duration="660000" />
+      <workItem from="1529903251804" duration="7535000" />
+      <workItem from="1529988508500" duration="5051000" />
+      <workItem from="1530161103554" duration="8415000" />
+      <workItem from="1530333179384" duration="4638000" />
+      <workItem from="1530337855174" duration="5274000" />
+      <workItem from="1530348152304" duration="1202000" />
+      <workItem from="1530427662022" duration="18077000" />
+      <workItem from="1530595825876" duration="1220000" />
+      <workItem from="1530597089247" duration="2542000" />
+      <workItem from="1530601050902" duration="5234000" />
+      <workItem from="1530684825925" duration="1310000" />
+      <workItem from="1530865535413" duration="1350000" />
+      <workItem from="1530868735405" duration="176000" />
+      <workItem from="1530869107715" duration="1127000" />
+      <workItem from="1530870459176" duration="7034000" />
+      <workItem from="1530936047060" duration="6766000" />
+      <workItem from="1531039970913" duration="13497000" />
+      <workItem from="1531123080970" duration="2471000" />
+      <workItem from="1531287746556" duration="352000" />
+      <workItem from="1531633361356" duration="599000" />
+      <workItem from="1531803959528" duration="240000" />
+      <workItem from="1531921702747" duration="353000" />
+      <workItem from="1531922079187" duration="372000" />
+      <workItem from="1531922475431" duration="81000" />
+      <workItem from="1531922578205" duration="1444000" />
+    </task>
+    <task id="LOCAL-00001" summary="first commit demo_code016 html file">
+      <created>1527595845514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527595845514</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="226186000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22023809" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.29268292" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3291536" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit demo_code016 html file" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit demo_code016 html file" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/html/h5c3/study_code043.html" />
+    <entry file="file://$PROJECT_DIR$/css/h5c3/study_code043.css" />
+    <entry file="file://$PROJECT_DIR$/js/h5c3/study_code043.js" />
+    <entry file="file://$PROJECT_DIR$/note/h5c3/study_note043.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="27" column="17" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note/h5c3/study_note044.txt" />
+    <entry file="file://$PROJECT_DIR$/note/nodejs/study_note044.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note/nodejs/study_note045.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="17" lean-forward="true" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note/nodejs/study_note046.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note/nodejs/study_note047.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="177" column="56" lean-forward="true" selection-start-line="177" selection-start-column="56" selection-end-line="177" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_code044.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/demo/public/css/dashboard.css" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/public/css/bootstrap/dist/css/bootstrap.min.css" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/node_modules/bootstrap/dist/css/bootstrap.css" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/db.json" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/package.json" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/app.js" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/router.js" />
+    <entry file="file://$PROJECT_DIR$/js/node/demo/views/index.html" />
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/db.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="548" selection-start-column="548" selection-end-column="548" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/public/js/stu_handle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="66" column="42" selection-start-line="66" selection-start-column="42" selection-end-line="66" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/node_modules/he/bin/he" />
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="17" column="24" lean-forward="true" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="110" column="39" lean-forward="true" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/public/css/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/node_modules/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/node_modules/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="6756" column="41" selection-start-line="6756" selection-start-column="41" selection-end-line="6756" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/public/js/stu_handle.js" />
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/views/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="72" lean-forward="true" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/views/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="118" column="38" selection-start-line="118" selection-start-column="38" selection-end-line="118" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/views/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="69" column="17" lean-forward="true" selection-end-line="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/views/add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="92" column="26" lean-forward="true" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/views/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="75" column="43" selection-start-line="75" selection-start-column="43" selection-end-line="75" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/public/js/router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo047/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/node/study_demo048/public/js/db.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/note/vue/study_note050.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue/study_code050.html" />
+    <entry file="file://$PROJECT_DIR$/html/vue-js/package.json" />
+    <entry file="file://$PROJECT_DIR$/html/vue-js/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/html/vue-js/node_modules/vue/dist/vue.js" />
+    <entry file="file://$PROJECT_DIR$/js/vue-js/vue.js" />
+    <entry file="file://$PROJECT_DIR$/html/vue-js/study_code050.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/package.json" />
+    <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/vue-js/vue.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="5" column="43720" lean-forward="true" selection-start-line="5" selection-start-column="43720" selection-end-line="5" selection-end-column="43720" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="74" column="7" lean-forward="true" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+          <folding>
+            <element signature="n#template#0;n#section#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#footer#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/vue-js/study_code051/todomvc-app-template/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="83" column="27" lean-forward="true" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="Copyright.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
