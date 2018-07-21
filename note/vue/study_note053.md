@@ -38,10 +38,10 @@ const path = require('path')
 
 // 导出一个具有特殊属性配置的对象
 module.exports = {
-    entry: './src/main.js',//入口文件模块
+    entry: './src/main.js',// 入口文件模块
     output: {
-        path: path.join(__dirname, './dist/'),//吃口文件所在模块，path 必须是一个绝对路径
-        filename: 'bundle.js' //打包的结果文件名
+        path: path.join(__dirname, './dist/'),// 出口文件所在模块，path 必须是一个绝对路径
+        filename: 'bundle.js' // 打包的结果文件名
     }
 }
 ```
@@ -62,14 +62,14 @@ const htmlWebpackPlugin = require('html-webpack-plugin')
 
 // 导出一个具有特殊属性配置的对象
 module.exports = {
-    entry: './src/main.js',//入口文件模块
+    entry: './src/main.js',// 入口文件模块
     output: {
-        path: path.join(__dirname, './dist/'),//吃口文件所在模块，path 必须是一个绝对路径
+        path: path.join(__dirname, './dist/'),// 出口文件所在模块，path 必须是一个绝对路径
         filename: 'bundle.js' //打包的结果文件名
     },
     plugins: [
-        //该插件的作用就是把 index.html 打包到 bundle.js 所属目录
-        //会自动在 index.html 中引入 script
+        // 该插件的作用就是把 index.html 打包到 bundle.js 所属目录
+        // 会自动在 index.html 中引入 script
         new htmlWebpackPlugin({
             template: 'index.html'
         })    
@@ -135,8 +135,11 @@ module.exports = {
 
 安装依赖：
 
-```shell
+``` shell
 npm i -D webpack-dev-server
+
+#### 在 webpack 4.0.1 以上版本必须安装 webpack-cli 才能够正常运行
+npm i -D webpack-cli
 ```
 
 配置（```webpack.config.js```)：
@@ -219,7 +222,7 @@ module.exports = {
 };
 ```
 
-### 配置 `babel-trsanform-runtime` 来解决代码重复的问题
+### 配置 `babel-plugin-transform-runtime` 来解决代码重复的问题
 
 安装依赖：
 
@@ -243,7 +246,6 @@ module: {
       use: {
         loader: 'babel-loader',
         options: {
-          cacheDirectory: true,// 开启缓存，可以提高打包的速度
           presets: ['env'],
           plugins: ["transform-runtime"]
         }
@@ -286,8 +288,19 @@ npm install -D vue-loader vue-template-compiler
 
 ````javascript
 // webpack.config.js
+
+// 如果 vue-loader 的版本是 15 及以上，则需要新增以下操作：
+// 1.引入 VueLoaderPlugin 
+const { VueLoaderPlugin } = require('vue-loader')
+// 2.在 plugins 中添加：
+plugins: [
+    new VueLoaderPlugin()
+]
+
+// .....
+
 {
-    test: /\.js$/,
+    test: /\.vue$/,
     use: [
        'vue-loader'
     ]
@@ -349,6 +362,132 @@ npm install -D vue-loader vue-template-compiler
 ```shell
 npm install --production
 ```
+
+# Hot Module Replacement 热更新
+
+[官方网址](https://webpack.js.org/guides/hot-module-replacement/)
+
+不支持 js 文件和 html 文件
+
+***webpack.config.js***
+
+```javascript
++++ const webpack = require('webpack')
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+  module.exports = {
+    entry: {
+      app: './src/index.js',
+      print: './src/print.js'
+      app: './src/index.js'
+    },
+    devServer: {
+      contentBase: './dist',
+      +++ hot: true
+    },
+    plugins: [
+      new HtmlWebpackPlugin({
+        title: 'Hot Module Replacement'
+      }),
+      +++ new webpack.HotModuleReplacementPlugin()
+    ],
+    output: {
+      filename: '[name].bundle.js',
+      path: path.resolve(__dirname, 'dist')
+    }
+  };
+```
+
+# 在模块化中使用 `vue-router`
+
+1. 安装
+
+```shell
+# 安装 vue-router
+npm install vue-router
+```
+
+2. 引用资源
+
+```html
+<script src="nude_moudles/vue-router/dist/vue-router.js"></script>
+```
+
+3. 配置 externals
+
+```javascript
+externals: {
+    'vue-router': "VueRouter"
+}
+```
+
+4. 在 `router.js` 中加载使用
+
+```javascript
+import VueRouter from 'vue-router'
+import Foo from './components/Foo.vue'
+import Bar from './components/Bar.ve'
+
+// 此处默认导出 new 出来的 router 实例
+exports defalut new VueRouter({
+    routes: [
+        {
+            path: '/foo',
+            component: Foo
+        },
+        {
+            path: '/bar',
+            component: Bar
+        }
+    ]
+})
+```
+
+5. 在 `main.js` 文件中配置使用路由对象
+
+```js
+import Vue from 'vue'
+import App from './App.vue'
+import router from './router'
+
+new Vue({
+    components: {App},
+    template: '<APP />',
+    router
+}).$mount('#app')
+```
+
+6. 在 `App.vue` 中设置路由出口
+
+```vue
+<template>
+	<div id='app'>
+    	<h1>根组件</h1>
+    	<ul>
+            <li><a href="#/foo">Go to Foo</a></li>
+            <li><a href="#/bar">Go to Bar</a></li>
+    	</ul>
+        <router-view></router-view>
+	</div>
+</template>
+```
+
+# VueCLi
+
+官方开发的配置好的 webpack 项目，不推荐使用，推荐自己搭建，干巴爹
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
