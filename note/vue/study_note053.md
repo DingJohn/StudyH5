@@ -158,6 +158,10 @@ devServer: {
     "build": "webpack",
     "watch-build": "webpack --watch",// 修改完成自动打包
     "dev": "webpack-dev-server --open"// 修改完成自动打包并刷新浏览器
+    
+    // 在 webpack 4以上的版本中，推荐使用以下方式添加
+    "dev": "webpack-dev-server --open --mode development ./src/main.js --output ./dist/bundle.js --watch",
+    "build": "webpack --mode production ./src/main.js --output ./dist/bundle.js --watch"
 }
 ```
 
@@ -231,7 +235,7 @@ npm install --save-dev babel-plugin-transform-runtime
 ```
 
 ```shell
-npm install --save babel-runtime
+npm install --save babel-runtime babel-preset-env
 ```
 
 配置：
@@ -383,7 +387,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
       app: './src/index.js'
     },
     devServer: {
-      contentBase: './dist',
+      contentBase: './',
       +++ hot: true
     },
     plugins: [
