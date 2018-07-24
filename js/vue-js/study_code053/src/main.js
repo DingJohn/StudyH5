@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 
 new Vue({
-    el:"#app",
-    components: {App},
-    template: '<App />'
-})
+    component: {App},
+    template: '<APP />'
+}).$mount('#app')
